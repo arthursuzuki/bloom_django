@@ -31,13 +31,19 @@ jobs:
         run: pip install -r requirements.txt
         
       # Optional: Add step to run tests here (PyTest, Django test suites, etc.)
+      - name: Cleaning testing files
+        run: |
+          cd project_bloom/
+          rm db.sqlite3
+          rm .env
+          cd ..
       
       - name: Upload artifact for deployment jobs
         uses: actions/upload-artifact@v2
         with:
           name: python-app
           path: |
-            . 
+            project_bloom/
             !venv/
 
   deploy:
