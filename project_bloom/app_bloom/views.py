@@ -4,3 +4,5 @@ from app_bloom.urls import *
 
 def home(request):
     return HttpResponse("funcionando"),
+def hello(request):
+    return HttpResponse("foi hello")
