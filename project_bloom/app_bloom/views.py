@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from app_bloom.urls import *
+from app_bloom.forms import *
 
 def home_page(request):
     return render(request,'inicial/header.html')
@@ -16,3 +17,15 @@ def doarrecorrente (request):
 
 def doarunica (request):
     return render(request, 'inicial/doarunica.html')
+def cadastrocrianca(request):
+    success_message = None
+    if request.method == 'POST':
+        form = CriancaForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            print("Aceito")
+            success_message = "Os dados foram enviados com sucesso!"
+    else:
+        print("Erro ao salvar os dados")
+        form = CriancaForm()
+    return render(request, 'inicial/cadastrocrianca.html', {'form': form, 'success_message': success_message})
