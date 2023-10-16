@@ -23,9 +23,7 @@ def cadastrocrianca(request):
         form = CriancaForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            print("Aceito")
             success_message = "Os dados foram enviados com sucesso!"
     else:
-        print("Erro ao salvar os dados")
         form = CriancaForm()
     return render(request, 'inicial/cadastrocrianca.html', {'form': form, 'success_message': success_message})
