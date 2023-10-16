@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doação Unica</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .value-input {
+            width: 300px; /* Largura do campo de entrada */
+            padding: 10px;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .insert-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .insert-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+        <script>
+            function linkdoar(){
+                var valor = document.getElementById("valor").value;
+                valor = parseInt(valor);
+            }
+        </script>
+</head>
+<body>
+    <h1 class="title">Contribuição única</h1>
+    <h3>valor</h3>
+    <br><br>
+    <input id= "valor" type="text" class="value-input" placeholder="R$">
+    <br/>
+    <div class="button-container">
+        <a href="https://nubank.com.br/pagar/m3yej/xMRbnKHJEW" class="insert-button">Concluir</a>
+    </div>
+</body>
+</html>
