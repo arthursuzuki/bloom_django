@@ -4,7 +4,7 @@ from app_bloom.views import *
 
 
 urlpatterns = [
-    path('',home_page),
+    path('',home_page,name="home"),
     path('hello/',home_page,name="name"),
     path('sobre/',home_page,name="sobre"),
     path('login/padrinho/',home_page,name="l_padrinho"),

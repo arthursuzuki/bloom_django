@@ -84,8 +84,11 @@
     <div id="header">
         <div id="logo-container">
             <div id="logo-principal">
-                <img src="{% static 'logo\Logo.png' %}" alt="Logo Bloom" style="width: 150px; height: auto;">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'logo\Logo.png' %}" alt="Logo Bloom" style="width: 150px; height: auto;">
+                </a>
             </div>
+            
             <div id="links">
                 <a href="{% url 'sobre' %}">Sobre nós</a>
                 <a href="{% url 'l_padrinho' %}">Apadrinhar</a>
