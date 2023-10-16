@@ -8,12 +8,11 @@ def menu(request):
     return render(request,'inicial/menu.html')
 def login(request):
     return render(request,'inicial/login.html')
-    
 def doar (request):
-    return render(request, 'doar.html')
+    return render(request, 'inicial/doar.html')
 
 def doarrecorrente (request):
-    return render(request, 'doarrecorrente.html')
+    return render(request, 'inicial/doarrecorrente.html')
 
 def doarunica (request):
-    return render(request, 'doarunica.html')
+    return render(request, 'inicial/doarunica.html')
