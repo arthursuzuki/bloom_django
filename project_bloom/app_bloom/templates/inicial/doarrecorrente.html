@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribuição Recorrente</title>
+</head>
+
+<style>
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .value-input {
+            width: 300px; /* Largura do campo de entrada */
+            padding: 10px;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+    div {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    input[type="text"],
+    input[type="radio"] {
+        margin: 15px 0;
+    }
+
+    .insert-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .insert-button:hover {
+            background-color: #0056b3;
+        }
+    input[type="radio"] {
+        width: 20px;
+        height: 20px;
+        background-color: #d9d9d9;
+        border: none;
+        border-radius: 50%;
+        margin-right: 20px;
+    }
+
+</style>
+
+<body>
+    <div>
+        <h1>Contribuição Recorrente</h1>
+        <br>
+        <br>
+        <h3>Valor</h3>
+        <div class="valor">
+            <input id= "valor" type="text" class="value-input" placeholder="R$">
+        </div>
+        <h3>Recorrencia</h3>
+        <div class="opcoes">
+            <input type="radio" name="recorrencia" value="mensalmente" /> mensalmente
+            <input type="radio" name="recorrencia" value="anualmente" /> anualmente</div>
+        <br>
+        <div class="button-container">
+            <a href="https://nubank.com.br/pagar/m3yej/xMRbnKHJEW" class="insert-button">Doar</a>
+        </div>
+    </div>
+</body>
+
+</html>
