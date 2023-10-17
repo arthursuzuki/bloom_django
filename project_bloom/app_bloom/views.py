@@ -27,3 +27,5 @@ def cadastrocrianca(request):
     else:
         form = CriancaForm()
     return render(request, 'inicial/cadastrocrianca.html', {'form': form, 'success_message': success_message})
+def login_funci(request):
+    return render(request,'inicial/login_funci.html')
