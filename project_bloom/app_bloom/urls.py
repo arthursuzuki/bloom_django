@@ -13,5 +13,6 @@ urlpatterns = [
     path('doar/',doar,name='doar'),
     path('doar/recorrente/',doarrecorrente),
     path('doar/unica/', doarunica),
-    path('cadastro/crianca/',cadastrocrianca,name="cadastrar_crianca")
+    path('cadastro/crianca/',cadastrocrianca,name="cadastrar_crianca"),
+    path('funcionario/', funcionario),
 ]
