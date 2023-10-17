@@ -12,6 +12,9 @@ def login(request):
 def doar (request):
     return render(request, 'inicial/doar.html')
 
+def funcionario (request):
+    return render(request, 'funcionario.html')
+
 def doarrecorrente (request):
     return render(request, 'inicial/doarrecorrente.html')
 
@@ -29,3 +32,5 @@ def cadastrocrianca(request):
     return render(request, 'inicial/cadastrocrianca.html', {'form': form, 'success_message': success_message})
 def login_funci(request):
     return render(request,'inicial/login_funci.html')
+def funcionario(request):
+    return render(request, 'inicial/funcionario.html')
