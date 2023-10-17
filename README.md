@@ -34,7 +34,8 @@ https://youtu.be/eg-EhZ1Th_I
 
 ## Issue/Bug Tracker
 ![image](https://github.com/arthursuzuki/bloom_django/assets/129343931/1596b2a8-667c-4b7f-9f26-ae8ebabb5866)
-![image](https://github.com/arthursuzuki/bloom_django/assets/132784629/3c893cb9-9d8d-4c43-9246-73a0dab987f2)
+![image](https://github.com/arthursuzuki/bloom_django/assets/129343931/4747f625-9cd7-4906-893e-a36926d25ef9)
+
 
 ## Links
 * JIRA -> https://g9projetos.atlassian.net/jira/software/projects/BLM/boards/1
