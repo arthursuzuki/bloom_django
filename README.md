@@ -15,10 +15,10 @@
 - Promover a transparência na utilização de recursos e doações, garantindo que cada contribuição seja usada de forma eficaz;
 - Facilitar o acompanhamento e registro das atividades e progresso dos jovens atendidos pela ONG;
 
-# Quadro da Sprint 01 do Jira
+## Quadro da Sprint 01 do Jira
 ![image](https://github.com/arthursuzuki/bloom_django/assets/129343931/52e8152d-8df9-49d6-8895-d22a41704e72)
 
-# Quadro Backlog 01 do Jira
+## Quadro Backlog 01 do Jira
 ![image](https://github.com/arthursuzuki/bloom_django/assets/129343931/fcc871f8-1871-46eb-9a12-227d47d72ce7)
 
 ## Relato de Pair Programming:
@@ -39,7 +39,7 @@ https://youtu.be/eg-EhZ1Th_I
 ## Links
 * JIRA -> https://g9projetos.atlassian.net/jira/software/projects/BLM/boards/1
 * PROTOTIPO LO-FI -> https://www.figma.com/file/rvwCOWgTEhYc4OUmmihGbQ/Untitled?type=design&node-id=0%3A1&mode=design&t=HoYdwVjFh6cn8d52-1
-* GITHUB -> https://discord.com/channels/1151218381421301872/1151218590981292065/1163639585549582346
+* GITHUB -> https://github.com/arthursuzuki/bloom_django
 * GOOGLE DRIVE -> https://drive.google.com/drive/folders/1XNxEdC_M6v0TB5X5kPSG2DXqeW1-Rv_2?usp=sharing
 * DIAGRAMA DE ATIVIDADES -> https://miro.com/app/board/uXjVNZhFtas=/
 
