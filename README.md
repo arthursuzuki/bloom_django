@@ -35,25 +35,27 @@ https://youtu.be/eg-EhZ1Th_I
 ![image](https://github.com/arthursuzuki/bloom_django/assets/132784629/3c893cb9-9d8d-4c43-9246-73a0dab987f2)
 
 ## Links
-<p>JIRA -> https://g9projetos.atlassian.net/jira/software/projects/BLM/boards/1</p>
-<p>FIGMA -> https://www.figma.com/file/rvwCOWgTEhYc4OUmmihGbQ/Untitled?type=design&node-id=0%3A1&mode=design&t=HoYdwVjFh6cn8d52-1</p>
-<p>GITHUB -> https://discord.com/channels/1151218381421301872/1151218590981292065/1163639585549582346</p>
-<p>GOOGLE DRIVE -> https://drive.google.com/drive/folders/1XNxEdC_M6v0TB5X5kPSG2DXqeW1-Rv_2?usp=sharing</p>
+* JIRA -> https://g9projetos.atlassian.net/jira/software/projects/BLM/boards/1
+* PROTOTIPO LO-FI -> https://www.figma.com/file/rvwCOWgTEhYc4OUmmihGbQ/Untitled?type=design&node-id=0%3A1&mode=design&t=HoYdwVjFh6cn8d52-1
+* GITHUB -> https://discord.com/channels/1151218381421301872/1151218590981292065/1163639585549582346
+* GOOGLE DRIVE -> https://drive.google.com/drive/folders/1XNxEdC_M6v0TB5X5kPSG2DXqeW1-Rv_2?usp=sharing
+* DIAGRAMA DE ATIVIDADES -> https://miro.com/app/board/uXjVNZhFtas=/
+
 
 ## Colaboradores:
-<p>Ana Beatriz de Araújo Viana Lima - abavl@cesar.school</p>
-<p>Arthur Jatobá Lobo Suzuki - ajls@cesar.school</p>
-<p>Eduardo Alves Lins - eal3@cesar.school</p>
-<p>Ian de Barros Nunes - ibn@cesar.school</p>
-<p>Luísa Carvalho Chagas - lcc3@cesar.school</p>
-<p>Luísa Onias de Carvalho Carneiro da Cunha - loccc@cesar.school</p>
-<p>Manuela Carneiro Leão de Azevedo - mcla2@cesar.school</p>
-<p>Maria Augusta Barreto de Gois - mabg@cesar.school</p>
-<p>Marina Pontual Coutinho - mpc5@cesar.school</p>
-<p>Pedro Augusto de Souza Farias - pasf@cesar.school</p>
-<p>Pedro Cabral Coutinho - pcc2@cesar.school</p>
-<p>Vinícius Gomes Beltrão - vgb@cesar.school</p>
-
+* Ana Beatriz de Araújo Viana Lima --> abavl@cesar.school
+* Arthur Jatobá Lobo Suzuki --> ajls@cesar.school
+* Eduardo Alves Lins --> eal3@cesar.school
+* Ian de Barros Nunes --> ibn@cesar.school
+* Luísa Carvalho Chagas --> lcc3@cesar.school
+* Luísa Onias de Carvalho Carneiro da Cunha --> loccc@cesar.school
+* Manuela Carneiro Leão de Azevedo --> mcla2@cesar.school
+* Maria Augusta Barreto de Gois --> mabg@cesar.school
+* Marina Pontual Coutinho --> mpc5@cesar.school
+* Pedro Augusto de Souza Farias --> pasf@cesar.school
+* Pedro Cabral Coutinho --> pcc2@cesar.school
+* Vinícius Gomes Beltrão --> vgb@cesar.school
+* Arthur Suzuki --> aljs@cesar.school
 
 
 
