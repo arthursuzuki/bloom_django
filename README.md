@@ -23,6 +23,7 @@
 
 ## Relato de Pair Programming:
 Utilizamos o Pair Programming durante o desenvolvimento do Bloom. Fizemos através do Discord, onde o driver compartilhava a tela para o navigator. Nossa experiência foi incrível, sem sombra de dúvidas foi essencial para o progresso do nosso projeto. Não podemos esquecer, que, o pair programming ajudou imensamente em momentos de limitação criativa de um dos indivíduos, e que além disso, ele foi primordial para compartilhar conhecimento entre os integrantes.
+
 ### Duplas: 
 <p><b>Luísa Chagas & Maria Augusta:</b> Luísa e Maria Augusta optaram pelo uso do pair programming devido à várias vantagens, entre elas o aprendizado compartilhado, onde as duas programadoras podem se ajudar no desenvolvimento e passar conhecimento entre elas. Enquanto Luísa ficou responsável pelo front-end, Mariah cuidou do back-end na implementação de uma história.</p>
 <p><b>Arthur Suzuki & Vinicius Beltrão:</b> Arthur e Vinicius usaram essa técnica a fim obter maior foco no desenvolvimento do Bloom, evitando distrações e aumentando a produtividade da dupla, resultando em um tempo de desenvolvimento menor. A dupla ficou responsável pelo screencast, home do site, readme e diagrama de atividades.</p>
@@ -33,9 +34,11 @@ Além disso, para que todos estivessem à par do progresso da aplicação, fizem
 https://youtu.be/eg-EhZ1Th_I
 
 ## Issue/Bug Tracker
-![image](https://github.com/arthursuzuki/bloom_django/assets/129343931/1596b2a8-667c-4b7f-9f26-ae8ebabb5866)
+![image](https://github.com/arthursuzuki/bloom_django/assets/129343931/18ae9c8d-b70b-4776-8d8a-aa4f0d4faa81)
 ![image](https://github.com/arthursuzuki/bloom_django/assets/129343931/4747f625-9cd7-4906-893e-a36926d25ef9)
 
+## Sketches e Storyboards
+![image](https://github.com/arthursuzuki/bloom_django/assets/129343931/12f9178c-fb03-4ba7-a621-49eb41249513)
 
 ## Links
 * JIRA -> https://g9projetos.atlassian.net/jira/software/projects/BLM/boards/1
