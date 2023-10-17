@@ -30,6 +30,10 @@ Além disso, para que todos estivessem à par do progresso da aplicação, fizem
 ## Screencast do Lo-fi
 https://youtu.be/eg-EhZ1Th_I
 
+## Issue/Bug Tracker
+![image](https://github.com/arthursuzuki/bloom_django/assets/132784629/c305821b-2b14-44f2-beb4-743efc0dc6c6)
+![image](https://github.com/arthursuzuki/bloom_django/assets/132784629/3c893cb9-9d8d-4c43-9246-73a0dab987f2)
+
 ## Links
 <p>JIRA -> https://g9projetos.atlassian.net/jira/software/projects/BLM/boards/1</p>
 <p>FIGMA -> https://www.figma.com/file/rvwCOWgTEhYc4OUmmihGbQ/Untitled?type=design&node-id=0%3A1&mode=design&t=HoYdwVjFh6cn8d52-1</p>
