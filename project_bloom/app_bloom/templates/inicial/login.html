@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blo🌸m</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-color: #F2F2F2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px;
+            z-index: 1000;
+        }
+
+        #logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #links {
+            display: flex;
+            gap: 20px;
+            align-items: left;
+            justify-content: flex-start;
+            margin-left: 15px;
+        }
+
+        #links a {
+            text-decoration: none;
+            color: black;
+            cursor: pointer;
+        }
+
+        #images {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #usuario {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-right: 20px;
+            width: 50px;
+        }
+
+        #images img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        #text {
+            text-align: center;
+            color: #333;
+            font-size: 16px;
+            font-weight: lighter;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    {% load static %}
+    <!-- Seção do cabeçalho -->
+    <div id="header">
+        <div id="logo-container">
+            <div id="logo-principal">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'logo\Logo.png' %}" alt="Logo Bloom" style="width: 150px; height: auto;">
+                </a>
+            </div>
+            
+            <div id="links">
+                <a href="{% url 'sobre' %}">Sobre nós</a>
+                <a href="{% url 'l_padrinho' %}">Apadrinhar</a>
+                <a href="{% url 'l_padrinho' %}">Acompanhar Aluno</a>
+                <a href="{% url 'doar' %}">Contribuir</a>
+                <a href="{% url 'opc_login' %}">Login/Cadastro</a>
+            </div>
+        </div>
+    </div> 
+
+    <div id="Logins" style="display: flex; flex-direction: column; justify-content: space-between;">
+        <a href="{% url 'loginfunc' %}" class="btn" style="background-color: #F8BB86; color: #FFFFFF; border-radius: 10px; padding: 10px 20px; text-align: center; text-decoration: none;">Login funcionário</a>
+        <a href="{% url 'l_padrinho' %}" class="btn" style="background-color: #F8BB86; color: #FFFFFF; border-radius: 10px; padding: 10px 20px; text-align: center; text-decoration: none; margin: 20px;">Login padrinho</a>
+        <a href="{% url 'contribuir' %}" class="btn" style="background-color: #F8BB86; color: #FFFFFF; border-radius: 10px; padding: 10px 20px; text-align: center; text-decoration: none;">Criar cadastro</a>
+    </div>
+
+</body>
+</html>

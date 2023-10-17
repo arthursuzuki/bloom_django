@@ -30,7 +30,7 @@ if NOT_PROD:
     DEBUG = True
     # SECURITY WARNING: keep the secret key used in production secret!
     SECRET_KEY = 'django-insecure-1jb1wip@qo&36c4d_^=lhno4d#7ijj61n*4-s!x*lf^wvz1vfk'
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ['*']
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
@@ -70,8 +70,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app_bloom',
-    'project_bloom',
     "whitenoise.runserver_nostatic",
+    
+
 ]
 
 MIDDLEWARE = [
@@ -79,12 +80,10 @@ MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
 ROOT_URLCONF = 'project_bloom.urls'
 
 TEMPLATES = [
@@ -157,7 +156,7 @@ USE_TZ = True
 STATIC_URL = os.environ.get('DJANGO_STATIC_URL', "/static/")
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-STATICFILES_STORAGE = ('whitenoise.storage.CompressedManifestStaticFilesStorage')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

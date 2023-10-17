@@ -19,5 +19,5 @@ from django.urls import path,include
 from app_bloom.urls import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include("app_bloom.urls")),
+    path('',include('app_bloom.urls')),
 ]
