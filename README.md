@@ -33,6 +33,10 @@ Além disso, para que todos estivessem à par do progresso da aplicação, fizem
 ## Screencast do Lo-fi
 https://youtu.be/eg-EhZ1Th_I
 
+## Screencast do site
+
+https://github.com/arthursuzuki/bloom_django/assets/132377213/93a8babc-e4db-48f7-b680-9483379adb72
+
 ## Issue/Bug Tracker
 ![image](https://github.com/arthursuzuki/bloom_django/assets/129343931/18ae9c8d-b70b-4776-8d8a-aa4f0d4faa81)
 ![image](https://github.com/arthursuzuki/bloom_django/assets/129343931/4747f625-9cd7-4906-893e-a36926d25ef9)
