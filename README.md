@@ -33,7 +33,7 @@ Além disso, para que todos estivessem à par do progresso da aplicação, fizem
 https://youtu.be/eg-EhZ1Th_I
 
 ## Issue/Bug Tracker
-![image](https://github.com/arthursuzuki/bloom_django/assets/132784629/c305821b-2b14-44f2-beb4-743efc0dc6c6)
+![image](https://github.com/arthursuzuki/bloom_django/assets/129343931/1596b2a8-667c-4b7f-9f26-ae8ebabb5866)
 ![image](https://github.com/arthursuzuki/bloom_django/assets/132784629/3c893cb9-9d8d-4c43-9246-73a0dab987f2)
 
 ## Links
@@ -57,7 +57,7 @@ https://youtu.be/eg-EhZ1Th_I
 * Pedro Augusto de Souza Farias --> pasf@cesar.school
 * Pedro Cabral Coutinho --> pcc2@cesar.school
 * Vinícius Gomes Beltrão --> vgb@cesar.school
-* Arthur Suzuki --> aljs@cesar.school
+
 
 
 
