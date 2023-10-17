@@ -1,6 +1,7 @@
 from django.urls import path,include
 from django.http import HttpResponse
 from app_bloom.views import *
+from app_bloom.views import editargestao, doar, doarrecorrente, doarunica
 
 
 urlpatterns = [
@@ -16,4 +17,3 @@ urlpatterns = [
     path('cadastro/crianca/',cadastrocrianca,name="cadastrar_crianca"),
     path('login/funcionarios/',login_funci,name='loginfunc'),
     path('funcionario/', funcionario,name='funcionario'),
-]

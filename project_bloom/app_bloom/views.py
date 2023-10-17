@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from app_bloom.urls import *
 from app_bloom.forms import *
 
+
 def home_page(request):
     return render(request,'inicial/header.html')
 def menu(request):
@@ -34,3 +35,4 @@ def login_funci(request):
     return render(request,'inicial/login_funci.html')
 def funcionario(request):
     return render(request, 'inicial/funcionario.html')
+
