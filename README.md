@@ -27,6 +27,10 @@ Utilizamos o Pair Programming durante o desenvolvimento do Bloom. Fizemos atrav�
 <p><b>Ian Nunes & Eduardo Lins:</b> Ian e Eduardo decidiram usar o pair programming pois assim poderiam tomar decisões de design juntos, além de ambos terem voz nas decisões, com o objetivo de que o resultado final do produto seja o melhor possivel.</p>
 Além disso, para que todos estivessem à par do progresso da aplicação, fizemos reuniões assincronas durante todo o processo do primeiro sprint. 
 
+## Screencast do Lo-fi
+
+
+
 ## Links
 JIRA -> https://g9projetos.atlassian.net/jira/software/projects/BLM/boards/1
 FIGMA -> https://www.figma.com/file/rvwCOWgTEhYc4OUmmihGbQ/Untitled?type=design&node-id=0%3A1&mode=design&t=HoYdwVjFh6cn8d52-1
