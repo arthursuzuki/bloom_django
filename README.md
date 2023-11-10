@@ -7,11 +7,7 @@
 
 <p>Afinal, quem é o Gotas?</p>
 
-A Gotas de Flor com Amor é uma ONG localizada na cidade de São Paulo, mais especificamente na Zona Sul, abrangendo os bairros do Brooklin e Campo Belo. Este programa social desempenha um papel fundamental na vida de diversos jovens e crianças, proporcionando oportunidades essenciais para que possam trilhar um caminho de sucesso e se tornarem cidadãos exemplares.
-
-Suas atividades são fundamentadas em valores como cidadania, cultura, oficinas de arte, esportes, iniciação musical e orientação para o mercado de trabalho. Além disso, a Gotas de Flor com Amor se destaca por incorporar a terapia floral como parte integrante do apoio oferecido aos jovens beneficiados.
-
-Dessa forma, a ONG não apenas promove o desenvolvimento de habilidades práticas, mas também busca proporcionar bem-estar e equilíbrio emocional por meio da terapia floral, contribuindo para o crescimento saudável e completo dessas crianças e jovens.
+- Gotas de Flor com Amor é uma ONG localizada na cidade de São Paulo, mais precisamente na Zona Sul da cidade paulista, entre os bairros do Brooklin e Campo Belo.<br>É um programa social que está presente na vida de vários jovens e crianças, fazendo a diferença e proporcionando a chance que eles tanto precisam para se tornarem seres humanos de sucesso.<br>Suas atividades baseiam-se nos em valores como cidadania, cultura, oficinas de arte, esportes, iniciação musical, introdução ao mercado de trabalho.<br>A ONG tem como uma das suas principais caracteristicas o uso da terapia floral com os jovens beneficiados.
 
 <p>Nossa aplicação foi pensada para:</p> 
 
@@ -54,8 +50,6 @@ https://github.com/arthursuzuki/bloom_django/assets/132377213/93a8babc-e4db-48f7
 * GITHUB -> https://github.com/arthursuzuki/bloom_django
 * GOOGLE DRIVE -> https://drive.google.com/drive/folders/1XNxEdC_M6v0TB5X5kPSG2DXqeW1-Rv_2?usp=sharing
 * DIAGRAMA DE ATIVIDADES -> https://miro.com/app/board/uXjVNZhFtas=/
-* AZURE -> https://bloomg9.azurewebsites.net/
-* GOOGLE SITES -> https://sites.google.com/view/grupo9-bloom/home
 
 
 ## Colaboradores:
