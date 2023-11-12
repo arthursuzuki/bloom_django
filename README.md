@@ -71,10 +71,3 @@ https://github.com/arthursuzuki/bloom_django/assets/132377213/93a8babc-e4db-48f7
 * Pedro Augusto de Souza Farias --> pasf@cesar.school
 * Pedro Cabral Coutinho --> pcc2@cesar.school
 * Vinícius Gomes Beltrão --> vgb@cesar.school
-
-
-
-
-
-
-
