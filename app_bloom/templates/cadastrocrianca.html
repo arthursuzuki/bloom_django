@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blo🌸m</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="icon" href="logo\Flor_logo.png">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: Montserrat, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -18,64 +23,19 @@
             left: 0;
             width: 100%;
             height: 30px;
-            background-color: #F2F2F2;
+            background-color: #DA6CB3;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: center;
             padding: 14px;
             z-index: 1000;
-        }
-
-        #container {
-            width: 100%;
-            height: 80%; 
-            position: relative;
-            margin: 0;
-            padding: 0;
-        }
-        .form-container {
-            width: 70%;
-            margin: 0 auto;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-      
-        .form-element {
-            margin-bottom: 20px;
-        }
-        .form-element-label {
-            font-size: 18px;
-        }
-        .form-input {
-            width: 100%;
-            font-size: 16px;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-       
-        #submit-button {
-            width: 100%;
-            background: #080808;
-            color: white;
-            padding: 15px;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        #submit-button:hover {
-            background: #8e399c;
-        }
-        .required {
-            color: red;
         }
 
         #logo-container {
             display: flex;
             align-items: center;
             gap: 10px;
+            margin-right: 40px;
         }
 
         #links {
@@ -88,7 +48,6 @@
 
         #links a {
             text-decoration: none;
-            color: black;
             cursor: pointer;
         }
 
@@ -120,6 +79,25 @@
             font-family: 'Trebuchet MS', sans-serif;
         }
 
+        button {
+            font-size: 14px;
+            padding: 20px;
+            font-family: Montserrat, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            background-color: #FFE8E5;
+            border-radius: 25px;
+            cursor: pointer;
+            height: 20px;
+            width: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border: none;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
     </style>
 
     <script>
@@ -141,16 +119,25 @@
 <body>
     {% load static %}
     <!-- Seção do cabeçalho -->
-    <div id="header">
+    <div id="header" style="display: flex; justify-content: space-between; align-items: center;">
         <div id="logo-container">
             <div id="logo-principal">
-                <img src="{% static 'logo\Logo.png' %}" alt="Logo Bloom" style="width: 150px; height: auto;"></div>
-            <div id="links">
-                <a href="{% url 'sobre' %}">Sobre nós</a>
-                <a href="{% url 'l_padrinho' %}">Apadrinhar</a>
-                <a href="{% url 'l_padrinho' %}">Acompanhar Aluno</a>
-                <a href="{% url 'doar' %}">Contribuir</a>
-                <a href="{% url 'opc_login' %}">Login</a></div>
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'logo\logoB.png' %}" alt="Logo Bloom" style="width: 60px; height: auto;">
+                </a>
+            </div>
+        </div>
+    
+        <div id="menu-buttons" style="display: flex; gap: 20px; margin-right: 25px;">
+            <button>
+                <a href={% url 'sobre'%} style="color: #423560;">Sobre Nós</a>
+            </button>
+            <button>
+                <a href={% url 'login'%} style="color: #423560;">Login Padrinho</a>
+            </button>
+            <button>
+                <a href={% url 'login_funci'%} style="color: #423560;">Login Funcionário</a>
+            </button>
         </div>
     </div>
     

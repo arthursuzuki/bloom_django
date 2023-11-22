@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -99,15 +99,10 @@
                 box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
             }     
         </style>
-    </style>
-    <script>
-        function toggleButtons() {
-            var extraButtons = document.getElementById("extra-buttons");
-            extraButtons.style.display = (extraButtons.style.display === "none") ? "flex" : "none";
-        }
-    </script>
+
 </head>
 <body>
+    {% load static %}
     <div id="header" style="display: flex; justify-content: space-between; align-items: center;">
         <div id="logo-container">
             <div id="logo-principal">
@@ -127,6 +122,26 @@
             <button>
                 <a href={% url 'login_funci'%} style="color: #423560;">Login Funcionário</a>
             </button>
+        </div>
+    </div>
+
+    <h1 style="text-align: center;">Login</h1>
+    <div id="container">
+        <div class="form-container">
+            <form method="post" action="{% url 'opc_login' %}">
+                {% csrf_token %}
+                <div class="form-element">
+                    <label class="form-element-label">Email<span class="required">*</span>:</label>
+                    <input class="form-input" type="email" name="email">
+                </div>
+                <div class="form-element">
+                    <label class="form-element-label">Senha<span class="required">*</span>:</label>
+                    <input class="form-input" type="password" name="password">
+                </div>
+                <div class="form-element" style="text-align: center;">
+                    <a id="submit-button" href="{% url 'funcionario' %}">Entrar</a>
+                </div>
+            </form>
         </div>
     </div>
 </body>

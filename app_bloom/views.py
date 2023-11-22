@@ -62,7 +62,7 @@ def cadastroCrianca(request):
 
 
 def loginFunci(request):
-    return render(request, 'login_funci.html', context={
+    return render(request, 'loginfunci.html', context={
         'name': 'Login Funcionário'
     })
 
