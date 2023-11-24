@@ -11,7 +11,6 @@
             font-family: Montserrat, sans-serif;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             margin: 0;
         }
 
@@ -63,7 +62,7 @@
             justify-content: left;
             margin-left: 10px;
             margin-top: 50px;
-            margin-bottom: 80px;
+            margin-bottom: 100px;
             z-index: 1080;
         }
 
@@ -75,53 +74,67 @@
             text-align: center;
         }
 
+        .container {
+            width: 1000px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .coluna {
+            box-sizing: border-box;
+            width: 50%;
+            float: left;
+            padding: 20px;
+        }
+        
+        .item {
+            background-color: #FFE8E5;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+        }
+
         .rectangle {
-            width: 800px;
-            height: 450px;
-            margin-bottom: 60px;
-            background: #FFE8E5;
-            border-radius: 9px;
+            width: 80px;
+            margin-right: 20px; 
+        }
+
+        .destaque {
+            width: 1200px;
+            height: 200px;
+            background: #ECECEC;
+            border-radius: 12px;
+            margin-bottom: 30px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
         }
 
-        .form-element {
-            margin-bottom: 20px;
-        }
-
-        .form-element-label {
-            display: block;
-            margin-bottom: 5px;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-
-        .submit-button {
-            font-size: 14px;
-            padding: 20px;
-            font-family: Montserrat, sans-serif;
-            font-weight: bold;
-            text-align: center;
-            background-color: #423560;
-            border-radius: 25px;
-            cursor: pointer;
-            height: 20px;
-            width: 170px;
+        .destaque-texto {
+            width: 400px;
+            height: 50px;
+            background: #423560;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            text-decoration: none;
-            border: none;
-            color: white; /* Adicionei a cor do texto para o botão de envio */
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+            color: white;
         }
+
+        @media screen and (max-width: 768px) {
+            .coluna {
+                width: 100%;
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
     </style>
 </head>
 <body>
@@ -149,26 +162,43 @@
         </div>
     </div>
     <div class="text">
-        <p>Login</p>
+        <p>Login > Selecionar</p>
     </div>
 
-    <div class="flex-center" style="gap:40px;">
-        <div class="rectangle">
-            <form method="post" action="{% url 'funcionario' %}">
-                {% csrf_token %}
-                <div class="form-element">
-                    <label class="form-element-label">CPF<span class="required">*</span>:</label>
-                    <input class="form-input" type="cpf" name="cpf">
+    <i><h1 class="flex-center">AFILHADOS</h1></i>
+
+    <div class="container flex-center">
+        <div class="coluna">
+            <a href={% url 'menucrianca1'%}>
+                <div class="item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="rectangle" alt="Imagem 1">
+                    <div>
+                        <p class="conteudo" style="text-align: left;">Nome: Bento Amorim</p>
+                        <p class="conteudo" style="text-align: left;">Idade: 8 anos</p>
+                    </div>
                 </div>
-                <div class="form-element">
-                    <label class="form-element-label">Senha<span class="required">*</span>:</label>
-                    <input class="form-input" type="password" name="password">
-                </div>
-                <div class="form-element" style="text-align: center;">
-                    <button class="submit-button" type="submit">Entrar</button>
-                </div>
-            </form>
+            </a>
         </div>
+        <div class="coluna">
+            <a href={% url 'menucrianca2'%}>
+                <div class="item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="rectangle" alt="Imagem 1">
+                    <div>
+                        <p class="conteudo" style="text-align: left;">Nome: Marina Viana</p>
+                        <p class="conteudo" style="text-align: left;">Idade: 6 anos</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <div class="destaque">
+            <h2 class="conteudo" style="margin-bottom: 2px;">APADRINHE MAIS CRIANÇAS</h2>
+            <p class="conteudo">Sua ajuda é importante para elas</p>
+            <div class="destaque-texto">
+                <p>gotasdeflor@gotasdeflor.org.br</p>
+            </div>
+        </div>
+
     </div>    
 </body>
 </html>

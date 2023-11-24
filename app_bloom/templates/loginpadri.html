@@ -11,9 +11,7 @@
             font-family: Montserrat, sans-serif;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            height: 100vh;
             margin: 0;
         }
 
@@ -38,47 +36,6 @@
             margin-right: 40px;
         }
 
-        #links {
-            display: flex;
-            gap: 20px;
-            align-items: left;
-            justify-content: flex-start;
-            margin-left: 15px;
-        }
-
-        #links a {
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        #images {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #usuario {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-right: 20px;
-            width: 50px;
-        }
-
-        #images img {
-            width: 150px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        #text {
-            text-align: center;
-            color: #333;
-            font-size: 16px;
-            font-weight: lighter;
-            font-family: 'Trebuchet MS', sans-serif;
-        }
-
         button {
             font-size: 14px;
             padding: 20px;
@@ -96,7 +53,75 @@
             text-decoration: none;
             border: none;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-        }     
+        }
+
+        .text {
+            float: left;
+            font-size: 12px;
+            text-align: left;
+            margin-top: 1px;
+            justify-content: left;
+            margin-left: 10px;
+            margin-top: 50px;
+            margin-bottom: 80px;
+            z-index: 1080;
+        }
+
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .rectangle {
+            width: 800px;
+            height: 450px;
+            margin-bottom: 60px;
+            background: #FFE8E5;
+            border-radius: 9px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-element {
+            margin-bottom: 20px;
+        }
+
+        .form-element-label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .submit-button {
+            font-size: 14px;
+            padding: 20px;
+            font-family: Montserrat, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            background-color: #423560;
+            border-radius: 25px;
+            cursor: pointer;
+            height: 20px;
+            width: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border: none;
+            color: white; /* Adicionei a cor do texto para o botão de envio */
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -123,5 +148,27 @@
             </button>
         </div>
     </div>
+    <div class="text">
+        <p>Login</p>
+    </div>
+
+    <div class="flex-center" style="gap:40px;">
+        <div class="rectangle">
+            <form method="post" action="{% url 'criancas' %}">
+                {% csrf_token %}
+                <div class="form-element">
+                    <label class="form-element-label">CPF<span class="required">*</span>:</label>
+                    <input class="form-input" type="cpf" name="cpf">
+                </div>
+                <div class="form-element">
+                    <label class="form-element-label">Senha<span class="required">*</span>:</label>
+                    <input class="form-input" type="password" name="password">
+                </div>
+                <div class="form-element" style="text-align: center;">
+                    <button class="submit-button" type="submit">Entrar</button>
+                </div>
+            </form>
+        </div>
+    </div>    
 </body>
 </html>

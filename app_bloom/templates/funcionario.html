@@ -11,9 +11,7 @@
             font-family: Montserrat, sans-serif;
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
-            height: 100vh;
             margin: 0;
         }
 
@@ -38,47 +36,6 @@
             margin-right: 40px;
         }
 
-        #links {
-            display: flex;
-            gap: 20px;
-            align-items: left;
-            justify-content: flex-start;
-            margin-left: 15px;
-        }
-
-        #links a {
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        #images {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        #usuario {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            margin-right: 20px;
-            width: 50px;
-        }
-
-        #images img {
-            width: 150px;
-            height: auto;
-            margin-bottom: 20px;
-        }
-
-        #text {
-            text-align: center;
-            color: #333;
-            font-size: 16px;
-            font-weight: lighter;
-            font-family: 'Trebuchet MS', sans-serif;
-        }
-
         button {
             font-size: 14px;
             padding: 20px;
@@ -96,7 +53,27 @@
             text-decoration: none;
             border: none;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-        }     
+        }
+
+        .text {
+            float: left;
+            font-size: 12px;
+            text-align: left;
+            margin-top: 1px;
+            justify-content: left;
+            margin-left: 10px;
+            margin-top: 50px;
+            margin-bottom: 100px;
+            z-index: 1080;
+        }
+
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
@@ -116,33 +93,28 @@
                 <a href={% url 'sobre'%} style="color: #423560;">Sobre Nós</a>
             </button>
             <button>
-                <a href={% url 'login'%} style="color: #423560;">Login Padrinho</a>
+                <a href={% url 'loginpadri'%} style="color: #423560;">Login Padrinho</a>
             </button>
             <button>
-                <a href={% url 'login_funci'%} style="color: #423560;">Login Funcionário</a>
+                <a href={% url 'loginfunci'%} style="color: #423560;">Login Funcionário</a>
             </button>
         </div>
     </div>
-    <br><br/>
-    <br><br/>
-    <br><br/>
-    <br><br/>
-    <br><br/>
-    <br><br/>
-    <h1>Funcionário</h1>
-    <br><br/>
-    <br><br/>
-    <br><br/>
-    <br><br/>
-    <br><br/>
-    <br><br/>
-    <br><br/>
-    <br><br/>
-    <br><br/>
-    <br><br/>
-    <br><br/>
-    <a href="{% url 'cadastrar_crianca' %}"><button id="botao1">Cadastrar Criança</button></a>
-    <a href="link2.html"><button id="botao2">Acompanhar Aluno</button></a>
-    <a href="link3.html"><button id="botao3">Gestão de Doações</button></a>
+    <div class="text">
+        <p>Login > Menu Funcionário</p>
+    </div>
+
+
+    <div class="flex-center" style="gap:40px;">
+        <a>
+            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" style="width: 200px;" class="rectangle" alt="Imagem 2">
+            <p>Nome</p>
+        </a>
+        <div>
+            <a href="{% url 'cadastrar_crianca' %}"><button>Cadastrar Criança</button></a>
+            <a href="link2.html"><button style="margin-top:30px;">Selecionar Criança</button></a>
+            <a href="link3.html"><button style="margin-top:30px;">Chamada</button></a>
+        </div>
+    </div>   
 </body>
 </html>

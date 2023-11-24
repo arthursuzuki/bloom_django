@@ -16,26 +16,26 @@ def sobre(request):
 
 
 def padrinho(request):
-    return render(request, 'header.html', context={
+    return render(request, 'padrinho.html', context={
         'name': 'Padrinho'
     })
 
 
-def doar(request):
-    return render(request, 'doar.html', context={
-        'name': 'Contribuições'
+def criancas(request):
+    return render(request, 'criancas.html', context={
+        'name': 'criancas'
     })
 
 
-def doarRecorrente(request):
-    return render(request, 'doarrecorrente.html', context={
-        'name': 'Contribuições'
+def menucrianca1(request):
+    return render(request, 'menucrianca1.html', context={
+        'name': 'menucrianca1'
     })
 
 
-def doarUnica(request):
-    return render(request, 'doarunica.html', context={
-        'name': 'Contribuições'
+def menucrianca2(request):
+    return render(request, 'menucrianca2.html', context={
+        'name': 'menucrianca2'
     })
 
 
@@ -61,13 +61,13 @@ def cadastroCrianca(request):
         })
 
 
-def loginFunci(request):
+def loginfunci(request):
     return render(request, 'loginfunci.html', context={
         'name': 'Login Funcionário'
     })
 
 
-def login(request):
-    return render(request, 'login.html', context={
+def loginpadri(request):
+    return render(request, 'loginpadri.html', context={
         'name': 'Login'
     })

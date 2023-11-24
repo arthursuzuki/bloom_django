@@ -5,12 +5,12 @@ from . import views
 urlpatterns = [
     path('', views.menu, name="home"),
     path('sobre', views.sobre, name="sobre"),
-    path('padrinho', views.padrinho, name="l_padrinho"),
-    path('login', views.login, name="login"),
-    path('doar', views.doar, name='doar'),
-    path('recorrente/', views.doarRecorrente),
-    path('unica/', views.doarUnica),
+    path('padrinho', views.padrinho, name="padrinho"),
+    path('criancas', views.criancas, name="criancas"),
+    path('menucrianca1', views.menucrianca1, name="menucrianca1"),
+    path('menucrianca2', views.menucrianca2, name="menucrianca2"),
+    path('loginpadri', views.loginpadri, name="loginpadri"),
     path('cadastrocrianca', views.cadastroCrianca, name="cadastrar_crianca"),
-    path('login/funcionario', views.loginFunci, name='login_funci'),
+    path('loginfunci', views.loginfunci, name='loginfunci'),
     path('funcionario', views.funcionario, name='funcionario'),
 ]
