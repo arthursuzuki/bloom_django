@@ -128,7 +128,7 @@
     <h1 style="text-align: center;">Login</h1>
     <div id="container">
         <div class="form-container">
-            <form method="post" action="{% url 'opc_login' %}">
+            <form method="post">
                 {% csrf_token %}
                 <div class="form-element">
                     <label class="form-element-label">Email<span class="required">*</span>:</label>
