@@ -13,4 +13,7 @@ urlpatterns = [
     path('cadastrocrianca', views.cadastroCrianca, name="cadastrar_crianca"),
     path('loginfunci', views.loginfunci, name='loginfunci'),
     path('funcionario', views.funcionario, name='funcionario'),
+    path('selecionar', views.selecionar, name='selecionar'),
+    path('desenvolvimentofunci', views.desenvolvimentofunci, name='desenvolvimentofunci'),
+    path('menualterar', views.menualterar, name='menualterar'),
 ]

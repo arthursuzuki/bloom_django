@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blo🌸m</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="icon" href="logo\Flor_logo.png">
+    <style>
+        body {
+            font-family: Montserrat, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-color: #DA6CB3;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 14px;
+            z-index: 1000;
+        }
+
+        #logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-right: 40px;
+        }
+
+        #links {
+            display: flex;
+            gap: 20px;
+            align-items: left;
+            justify-content: flex-start;
+            margin-left: 15px;
+        }
+
+        #links a {
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #images {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #usuario {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-right: 20px;
+            width: 50px;
+        }
+
+        #images img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        #text {
+            text-align: center;
+            color: #333;
+            font-size: 16px;
+            font-weight: lighter;
+            font-family: 'Trebuchet MS', sans-serif;
+        }
+
+        button {
+            font-size: 14px;
+            padding: 20px;
+            font-family: Montserrat, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            background-color: #FFE8E5;
+            border-radius: 25px;
+            cursor: pointer;
+            height: 20px;
+            width: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border: none;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .dados-crianca {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            background-color: #DA6CB3;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .dados-crianca img {
+            width: 100px; /* Ajuste conforme necessário */
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }   
+        .tabela-container {
+            margin: 20px;
+            border: 1px solid #ccc;
+            background-color: #DA6CB3;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 2px solid #DA6CB3;
+            padding: 8px;
+            text-align: center;
+            background-color: #FFE8E5;
+        }
+
+        .circle {
+            position: absolute;
+            top: 50%; /* Ajuste a porcentagem para posicionar verticalmente */
+            left: 50%; /* Ajuste a porcentagem para posicionar horizontalmente */
+            transform: translate(-50%, -50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+        }
+        .circle.red {
+            background-color: #FF0000;
+        }
+
+        .circle.yellow {
+            background-color: #FFFF00;
+        }
+
+        .circle.green {
+            background-color: #00FF00;
+        }
+        .enviar {
+        width: 161px;
+        height: 52px;
+        background: #DA6CB3;
+        color: #FFFFFF;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        font-weight: 400;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        }
+        .barra-navegacao {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            
+        }
+
+        .barra-navegacao button {
+            margin: 0 5px;
+            padding: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            width: 100px; /* Ajuste o valor conforme necessário */
+        }
+
+                            
+    </style>
+</head>
+<body>
+    {% load static %}
+    <!-- Seção do cabeçalho -->
+    <div id="header" style="display: flex; justify-content: space-between; align-items: center;">
+        <div id="logo-container">
+            <div id="logo-principal">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'logo\logoB.png' %}" alt="Logo Bloom" style="width: 60px; height: auto;">
+                </a>
+            </div>
+        </div>
+    
+        <div id="menu-buttons" style="display: flex; gap: 20px; margin-right: 25px;">
+            <button>
+                <a href={% url 'sobre'%} style="color: #423560;">Sobre Nós</a>
+            </button>
+            <button>
+                <a href={% url 'loginpadri'%} style="color: #423560;">Login Padrinho</a>
+            </button>
+            <button>
+                <a href={% url 'loginfunci'%} style="color: #423560;">Login Funcionário</a>
+            </button>
+        </div>
+    </div>
+    
+
+    <div class="dados-crianca">
+        <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" style="width: 60px; margin-right:10px;" class="rectangle" alt="Foto da Criança">
+        <p>Nome: Bento Amorim</p>
+    </div>
+    <div class="barra-navegacao">
+        <!-- Barra de navegação com botões para cada mês -->
+        <button onclick="mostrarTabela('Janeiro')">Janeiro</button>
+        <button onclick="mostrarTabela('Fevereiro')">Fevereiro</button>
+        <button onclick="mostrarTabela('Março')">Março</button>
+        <button onclick="mostrarTabela('Abril')">Abril</button>
+        <button onclick="mostrarTabela('Maio')">Maio</button>
+        <button onclick="mostrarTabela('Junho')">Junho</button>
+        <button onclick="mostrarTabela('Julho')">Julho</button>
+        <button onclick="mostrarTabela('Agosto')">Agosto</button>
+        <button onclick="mostrarTabela('Setembro')">Setembro</button>
+        <button onclick="mostrarTabela('Outubro')">Outubro</button>
+        <button onclick="mostrarTabela('Novembro')">Novembro</button>
+        <button onclick="mostrarTabela('Dezembro')">Dezembro</button>
+        <!-- Adicione botões para os outros meses aqui -->
+
+        <script>
+            function mostrarTabela(mes) {
+                // Oculta todas as tabelas
+                var tabelas = document.querySelectorAll('.tabela-container');
+                tabelas.forEach(function (tabela) {
+                    tabela.style.display = 'none';
+                });
+
+                // Exibe a tabela correspondente ao mês selecionado
+                var tabelaAtual = document.getElementById('tabela-' + mes);
+                if (tabelaAtual) {
+                    tabelaAtual.style.display = 'block';
+                }
+            }
+        </script>
+    </div>
+
+    <div class="tabela-container">
+        <h2>Atividades Realizadas</h2>
+
+        <table>
+            <tr>
+                <th></th>
+                <th>Capoeira</th>
+                <th>Coral</th>
+                <th>Vôlei</th>
+                <th>Futebol</th>
+                <th>Artes</th>
+                <th>Yoga</th>
+                <th>Meio Ambiente</th>
+                <th>Cidadania</th>
+            </tr>
+            <tr>
+                <th>Carga Horária</th>
+                <td contenteditable="true">6h</td>
+                <td contenteditable="true">8h</td>
+                <td contenteditable="true">6h</td>
+                <td contenteditable="true">4h</td>
+                <td contenteditable="true">6h</td>
+                <td contenteditable="true">10h</td>
+                <td contenteditable="true">6h</td>
+                <td contenteditable="true">5h</td>
+            </tr>
+            <tr>
+                <th style="position: relative;">
+                    <div class="circle red"></div>
+                </th>
+                <td contenteditable="true">2x</td>
+                <td contenteditable="true">4x</td>
+                <td contenteditable="true">1x</td>
+                <td contenteditable="true">4x</td>
+                <td contenteditable="true">0x</td>
+                <td contenteditable="true">1x</td>
+                <td contenteditable="true">3x</td>
+                <td contenteditable="true">1x</td>
+            </tr>
+            <tr>
+                <th style="position: relative;">
+                    <div class="circle yellow"></div>
+                </th>
+                <td contenteditable="true">2x</td>
+                <td contenteditable="true">4x</td>
+                <td contenteditable="true">1x</td>
+                <td contenteditable="true">4x</td>
+                <td contenteditable="true">0x</td>
+                <td contenteditable="true">1x</td>
+                <td contenteditable="true">3x</td>
+                <td contenteditable="true">1x</td>
+            </tr>
+            <tr>
+                <th style="position: relative;">
+                    <div class="circle green"></div>
+                </th>
+                <td contenteditable="true">2x</td>
+                <td contenteditable="true">4x</td>
+                <td contenteditable="true">1x</td>
+                <td contenteditable="true">4x</td>
+                <td contenteditable="true">0x</td>
+                <td contenteditable="true">1x</td>
+                <td contenteditable="true">3x</td>
+                <td contenteditable="true">1x</td>
+            </tr>
+        </table>
+        <div class="legenda">
+            <p>*Escala que representa o nível de satisfação da criança em cada atividade realizada por ela no mês selecionado.</p>
+        </div>
+        
+        
+    </div>
+    <button class="enviar" onclick="enviarAtualizacoes()">Enviar Atualizações</button>
+
+    <script>
+        function enviarAtualizacoes() {
+            alert("Atualizações enviadas com sucesso!");
+        }
+    </script>
+    
+</body>
+</html>

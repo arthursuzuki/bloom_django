@@ -23,19 +23,19 @@ def padrinho(request):
 
 def criancas(request):
     return render(request, 'criancas.html', context={
-        'name': 'criancas'
+        'name': 'Menu Criança'
     })
 
 
 def menucrianca1(request):
     return render(request, 'menucrianca1.html', context={
-        'name': 'menucrianca1'
+        'name': 'Menu Criança'
     })
 
 
 def menucrianca2(request):
     return render(request, 'menucrianca2.html', context={
-        'name': 'menucrianca2'
+        'name': 'Menu Criança'
     })
 
 
@@ -69,5 +69,23 @@ def loginfunci(request):
 
 def loginpadri(request):
     return render(request, 'loginpadri.html', context={
-        'name': 'Login'
+        'name': 'Login Padrinho'
+    })
+
+
+def selecionar(request):
+    return render(request, 'selecionar.html', context={
+        'name': 'Selecionar Criança'
+    })
+
+
+def menualterar(request):
+    return render(request, 'menualterar.html', context={
+        'name': 'Alterar Menu'
+    })
+
+
+def desenvolvimentofunci(request):
+    return render(request, 'desenvolvimentofunci.html', context={
+        'name': 'Alterar Desenvolvimento'
     })

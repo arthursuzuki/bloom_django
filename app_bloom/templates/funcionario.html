@@ -108,12 +108,12 @@
     <div class="flex-center" style="gap:40px;">
         <a>
             <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" style="width: 200px;" class="rectangle" alt="Imagem 2">
-            <p>Nome</p>
+            <p>Funcionário(a): Ana Lívia</p>
         </a>
         <div>
             <a href="{% url 'cadastrar_crianca' %}"><button>Cadastrar Criança</button></a>
-            <a href="link2.html"><button style="margin-top:30px;">Selecionar Criança</button></a>
-            <a href="link3.html"><button style="margin-top:30px;">Chamada</button></a>
+            <a href="{% url 'selecionar' %}"><button style="margin-top:30px;">Selecionar Criança</button></a>
+            <a href="{% url 'cadastrar_crianca' %}"><button style="margin-top:30px;">Chamada</button></a>
         </div>
     </div>   
 </body>

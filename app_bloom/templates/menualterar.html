@@ -11,6 +11,7 @@
             font-family: Montserrat, sans-serif;
             display: flex;
             flex-direction: column;
+            justify-content: center;
             margin: 0;
         }
 
@@ -69,70 +70,8 @@
         .flex-center {
             display: flex;
             justify-content: center;
-            align-items: center;
             flex-wrap: wrap;
             text-align: center;
-        }
-
-        .container {
-            width: 1000px;
-            margin: 0 auto;
-            overflow: hidden;
-        }
-
-        .coluna {
-            box-sizing: border-box;
-            width: 50%;
-            float: left;
-            padding: 20px;
-        }
-        
-        .item {
-            background-color: #FFE8E5;
-            padding: 15px;
-            margin-bottom: 20px;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-        }
-
-        .rectangle {
-            width: 80px;
-            margin-right: 20px; 
-        }
-
-        .destaque {
-            width: 1200px;
-            height: 200px;
-            background: #ECECEC;
-            border-radius: 12px;
-            margin-bottom: 30px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .destaque-texto {
-            width: 400px;
-            height: 50px;
-            background: #423560;
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-        }
-
-        @media screen and (max-width: 768px) {
-            .coluna {
-                width: 100%;
-            }
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
         }
 
     </style>
@@ -162,43 +101,20 @@
         </div>
     </div>
     <div class="text">
-        <p>Login > Selecionar</p>
+        <p>Login > Selecionar > Menu Crianca</p>
     </div>
 
-    <i><h1 class="flex-center">AFILHADOS</h1></i>
 
-    <div class="container flex-center">
-        <div class="coluna">
-            <a href={% url 'menucrianca1'%}>
-                <div class="item">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="rectangle" alt="Imagem 1">
-                    <div>
-                        <p class="conteudo" style="text-align: left;">Nome: Bento Amorim</p>
-                        <p class="conteudo" style="text-align: left;">Idade: 8 anos</p>
-                    </div>
-                </div>
-            </a>
+    <div class="flex-center" style="gap:40px;">
+        <a>
+            <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" style="width: 200px;" class="rectangle" alt="Imagem 2">
+            <p style="color: #423560;">Nome: Bento Amorim</p>
+            <p style="color: #423560;">Idade: 8 Anos</p>
+        </a>
+        <div>
+            <a href={% url 'desenvolvimentofunci'%}><button style="margin-top:30px;">Desenvolvimento</button></a>
+            <a href="link3.html"><button style="margin-top:30px;">Álbum Recordações</button></a>
         </div>
-        <div class="coluna">
-            <a href={% url 'menucrianca2'%}>
-                <div class="item">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="rectangle" alt="Imagem 1">
-                    <div>
-                        <p class="conteudo" style="text-align: left;">Nome: Marina Viana</p>
-                        <p class="conteudo" style="text-align: left;">Idade: 6 anos</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="destaque">
-            <h2 class="conteudo" style="margin-bottom: 2px;">APADRINHE MAIS CRIANÇAS</h2>
-            <p class="conteudo">Sua ajuda é importante para elas</p>
-            <div class="destaque-texto">
-                <a href="mailto:gotasdeflor@gotasdeflor.org.br" style="color: white; text-decoration: none;">gotasdeflor@gotasdeflor.org.br</a>
-            </div>
-        </div>
-
-    </div>    
+    </div>   
 </body>
 </html>
