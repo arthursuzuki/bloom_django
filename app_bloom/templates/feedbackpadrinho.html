@@ -105,35 +105,15 @@
     <div class="text">
         <p>Nome Tela</p>
     </div>
+
+    <!-- Início da segunda parte do código -->
+
     <div class="container">
-        <div class="faq-container">
-            <div class="faq-item">
-                <div class="faq-question">1. O que é o ECOnnect e como ele está relacionado à energia solar?</div>
-                <div class="faq-answer">A plataforma ECOnnect é um ambiente dedicado à promoção da conexão e integração dentro do ecossistema da energia solar, com um enfoque direto no Objetivo de Desenvolvimento Sustentável 7. Nossa missão é fornecer informações essenciais sobre regulamentações, oferecer recursos de acompanhamento financeiro, promover a conscientização sobre energia limpa e facilitar o acesso a empresas locais.</div>
-                <div class="faq-icon">▼</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">2. Como realizar um orçamento?</div>
-                <div class="faq-answer">Na área da "calculadora solar" você pode inserir algumas informações e realizar uma simulação que lhe dará um valor aproximado do investimento necessário de acordo com cada área disponível.</div>
-                <div class="faq-icon">▼</div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question">3. Quando terei o retorno financeiro do meu investimento?</div>
-                <div class="faq-answer">O tempo para obter o retorno financeiro do seu investimento em energia solar pode variar significativamente. Diversos fatores influenciam esse período, incluindo:
-                    <ul>
-                        <li>Incidência solar: A quantidade de luz solar disponível na sua região afeta diretamente o desempenho do seu sistema de energia solar. Regiões com maior incidência solar geralmente geram retorno mais rápido.</li>
-                        <li>Quantidade de placas solares: O tamanho do seu sistema solar, representado pela quantidade de painéis solares, impacta diretamente a quantidade de eletricidade que você pode gerar.</li>
-                        <li>Custos iniciais: Os custos iniciais do investimento, que incluem a compra e instalação do sistema, afetarão o tempo necessário para recuperar o dinheiro investido.</li>
-                        <li>Consumo de energia: O seu consumo de energia desempenha um papel fundamental. Quanto mais energia você usar e puder substituir pelo seu sistema solar, mais rápido o retorno ocorrerá.</li>
-                        <li>Taxas de eletricidade: As taxas de eletricidade na sua região e qualquer política de compensação de energia também podem influenciar o retorno financeiro.</li>
-                    </ul>
-                    Para estimar o tempo de retorno, você pode fazer uma simulação na nossa calculadora solar.
-                </div>
-                <div class="faq-icon">▼</div>
-            </div>
-        </div>
+      <h2>FEEDBACK</h2>
+      <h4>CONTE SUAS PERCEPÇÕES...</h4>
+      <p>O feedback de todos é essencial para projetos sociais como o Gotas!
+Além disso, você pode utilizar essa ferramenta  para enviar recados para o seu afilhado. Para isso, basta selecionar o destinatário que indique essa opção!</p>
+    </div>
         <div class="form-container">
             <div class="faq-form-container">
                 <h2>Não encontrou a resposta que procurava?</h2>
@@ -146,8 +126,20 @@
                 </form>
             </div>
 
-            
+           
         </div>
     </div>
+
+    <footer>
+        &copy; 2023 ECOnnect
+    </footer>
+    <script>
+        const faqItems = document.querySelectorAll(".faq-item");
+        faqItems.forEach(item => {
+            item.addEventListener("click", () => {
+                item.classList.toggle("open");
+            });
+        });
+    </script>
 </body>
 </html>

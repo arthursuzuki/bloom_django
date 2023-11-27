@@ -11,11 +11,3 @@ class FeedbackPadrinhoForm(forms.ModelForm):
     class Meta:
         model = FeedbackPadrinho
         fields = '__all__'
-
-class formLogin(forms.ModelForm):
-    class Meta:
-        model = Login
-        fields = [
-            'cpf',
-            'senha'
-        ]
