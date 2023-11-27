@@ -16,4 +16,5 @@ urlpatterns = [
     path('selecionar', views.selecionar, name='selecionar'),
     path('desenvolvimentofunci', views.desenvolvimentofunci, name='desenvolvimentofunci'),
     path('menualterar', views.menualterar, name='menualterar'),
+    path('feedbackpadrinho',views.feedbackpadrinho, name='feedbackpadrinho')
 ]

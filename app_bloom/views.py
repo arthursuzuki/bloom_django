@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .forms import CriancaForm
+from .forms import *
 
 
 def menu(request):
@@ -89,3 +89,29 @@ def desenvolvimentofunci(request):
     return render(request, 'desenvolvimentofunci.html', context={
         'name': 'Alterar Desenvolvimento'
     })
+
+
+def feedbackpadrinho(request):
+    if request.method == 'POST':
+        form =  FeedbackPadrinhoForm(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = FeedbackPadrinhoForm()
+    return render(request,"selecionarpadrinho.html",{'form':form})
+
+
+def cadastroCrianca(request):
+    success_message = None
+    if request.method == 'POST':
+        form = CriancaForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            success_message = "Os dados foram enviados com sucesso!"
+    else:
+        form = CriancaForm()
+    return render(request, 'cadastrocrianca.html', {
+        'form': form,
+        'success_message': success_message,
+        'name': 'Cadastro'
+        })

@@ -21,17 +21,17 @@ class Crianca(models.Model):
 
 class Padrinho(models.Model):
     nome= models.CharField(max_length=100)
-    telefone = models.models.IntegerField()
+    telefone = models.CharField(max_length=12)
     endereco = models.CharField(max_length=500)
-    cpf = models.IntegerField(max_length=11)
+    cpf = models.CharField(max_length=12)
     email = models.EmailField(max_length=254)
-    rg = models.IntegerField(max_length=9)
+    rg = models.CharField(max_length=10)
     profissao = models.CharField(max_length=40)
     reason = models.CharField(max_length=1000)
 
 class Pirralho(models.Model):
     nome = models.CharField(max_length=100)
-    idade =models.IntegerField(max_length=2)
+    idade =models.CharField(max_length=3)
 
 class destinatarioFeedback(models.TextChoices):
     AFILHADO = "Afilhado"
@@ -40,4 +40,3 @@ class destinatarioFeedback(models.TextChoices):
 class FeedbackPadrinho(models.Model):
     destinatario = models.TextField(choices=destinatarioFeedback.choices)
     mensagem = models.CharField(max_length=1000)
-
