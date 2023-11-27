@@ -16,3 +16,28 @@ class Crianca(models.Model):
 
     def __str__(self):
         return self.nome
+    
+
+
+class Padrinho(models.Model):
+    nome= models.CharField(max_length=100)
+    telefone = models.models.IntegerField()
+    endereco = models.CharField(max_length=500)
+    cpf = models.IntegerField(max_length=11)
+    email = models.EmailField(max_length=254)
+    rg = models.IntegerField(max_length=9)
+    profissao = models.CharField(max_length=40)
+    reason = models.CharField(max_length=1000)
+
+class Pirralho(models.Model):
+    nome = models.CharField(max_length=100)
+    idade =models.IntegerField(max_length=2)
+
+class destinatarioFeedback(models.TextChoices):
+    AFILHADO = "Afilhado"
+    GOTAS = "Gotas de Flor"
+
+class FeedbackPadrinho(models.Model):
+    destinatario = models.TextField(choices=destinatarioFeedback.choices)
+    mensagem = models.CharField(max_length=1000)
+
