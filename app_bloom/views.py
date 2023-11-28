@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 from .forms import *
 
@@ -96,6 +96,9 @@ def feedbackpadrinho(request):
         form =  FeedbackPadrinhoForm(request.POST)
         if form.is_valid():
             form.save()
+            return redirect('finishfeedback')
+
+            
     else:
         form = FeedbackPadrinhoForm()
     return render(request,"feedbackpadrinho.html",{'form':form})
@@ -115,3 +118,7 @@ def cadastroCrianca(request):
         'success_message': success_message,
         'name': 'Cadastro'
         })
+
+
+def finishfeedback(request):
+    return render(request,'finishfeedback.html')
