@@ -98,7 +98,7 @@ def feedbackpadrinho(request):
             form.save()
     else:
         form = FeedbackPadrinhoForm()
-    return render(request,"selecionarpadrinho.html",{'form':form})
+    return render(request,"feedbackpadrinho.html",{'form':form})
 
 
 def cadastroCrianca(request):

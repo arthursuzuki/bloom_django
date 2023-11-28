@@ -38,5 +38,6 @@ class destinatarioFeedback(models.TextChoices):
     GOTAS = "Gotas de Flor"
 
 class FeedbackPadrinho(models.Model):
+    nome = models.CharField(max_length=100)
     destinatario = models.TextField(choices=destinatarioFeedback.choices)
     mensagem = models.CharField(max_length=1000)
