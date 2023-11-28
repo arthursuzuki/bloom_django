@@ -11,4 +11,4 @@ class CriancaForm(forms.ModelForm):
 class FeedbackPadrinhoForm(forms.ModelForm):
     class Meta:
         model = FeedbackPadrinho
-        fields = '__all__'
+        fields = ['nome','destinatario','mensagem']
