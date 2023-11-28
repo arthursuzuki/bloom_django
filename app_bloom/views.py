@@ -84,6 +84,11 @@ def menualterar(request):
         'name': 'Alterar Menu'
     })
 
+def cadastropadrinho(request):
+    return render(request, 'cadastropadrinho.html', context={
+        'name': 'Cadastro Padrinho'
+    })
+
 
 def desenvolvimentofunci(request):
     return render(request, 'desenvolvimentofunci.html', context={
