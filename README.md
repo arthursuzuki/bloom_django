@@ -97,7 +97,7 @@ O Bloom foi desenvolvido para atender às necessidades específicas da ONG Gotas
   </li>
   <li>
     <a
-      href=""
+      href="https://docs.google.com/document/d/1968S8dkL-M1kviYw3N-KXpBOk9D650cttImPaMH1Ku4/edit?usp=sharing"
       >Programação em Par</a
     >
   </li>
