@@ -18,6 +18,7 @@ urlpatterns = [
     path('menualterar', views.menualterar, name='menualterar'),
     path('feedbackpadrinho',views.feedbackpadrinho, name='feedbackpadrinho'),
     path('finishfeedback',views.finishfeedback,name='finishfeedback'),
-    path('cadastropadrinho', views.cadastropadrinho, name='cadastropadrinho')
+    path('cadastropadrinho', views.cadastropadrinho, name='cadastropadrinho'),
+    path('desenvolvimento',views.desenvolvimentopadri,name='desenvolvimentopadri')
 ]
 

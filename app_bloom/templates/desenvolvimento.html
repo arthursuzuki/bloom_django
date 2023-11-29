@@ -6,6 +6,7 @@
     <title>Blo🌸m</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="icon" href="logo\Flor_logo.png">
+
     <style>
         body {
             font-family: Montserrat, sans-serif;
@@ -78,6 +79,36 @@
             text-decoration: none;
             color: inherit;
         }
+        .dados-crianca {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            background-color: #DA6CB3;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .dados-crianca img {
+            width: 100px; /* Ajuste conforme necessário */
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .tabela-container {
+            margin: 20px;
+            border: 1px solid #ccc;
+            background-color: #DA6CB3;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
 
     </style>
 </head>
@@ -101,9 +132,77 @@
                 <a href={% url 'loginfunci'%} style="color: #423560;">Login Funcionário</a>
             </button>
         </div>
+        
     </div>
     <div class="text">
         <div class="text">
             <p>Login > Selecionar > Menu Crianca</p>
         </div>
     </div>
+    <div class="dados-crianca">
+        <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" style="width: 60px; margin-right:10px;" class="rectangle" alt="Foto da Criança">
+        <p>Nome: Bento Amorim</p>
+    </div>
+    <form id="filtro-form" method="get" action="">
+        {{ form.as_p }}
+        <button type="submit">Filtrar</button>
+    </form>
+    </form>
+    <div class="tabela-container" id="tabela-Janeiro">
+        <h2>Itens</h2>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in itens %}
+                    <tr>
+                        <td>{{ item.nome }}</td>
+                        <td>{{ item.destinatario }}</td>
+                        <td>{{ item.mensagem }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Função para atualizar a tabela com base nos filtros selecionados
+            function atualizarTabela() {
+                var form = document.getElementById('filtro-form');
+                var formData = new FormData(form);
+
+                // Criar uma string de parâmetros de consulta a partir do FormData
+                var queryString = new URLSearchParams(formData).toString();
+
+                // Realizar uma solicitação GET assíncrona usando a Fetch API
+                fetch('?' + queryString)
+                    .then(response => response.json())
+                    .then(data => {
+                        var tbody = document.querySelector('#tabela-itens tbody');
+                        tbody.innerHTML = '';
+
+                        data.itens.forEach(item => {
+                            var row = '<tr><td>' + item.nome + '</td><td>' + item.descricao + '</td><td>' + item.preco + '</td></tr>';
+                            tbody.innerHTML += row;
+                        });
+                    });
+            }
+
+            // Capturar a mudança nos campos do formulário e atualizar a tabela
+            document.getElementById('filtro-form').addEventListener('change', function(event) {
+                event.preventDefault();
+                atualizarTabela();
+            });
+
+            // Atualizar a tabela ao carregar a página
+            atualizarTabela();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blo🌸m</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="icon" href="logo\Flor_logo.png">
+    <style>
+        body {
+            font-family: Montserrat, sans-serif;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        #header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30px;
+            background-color: #DA6CB3;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 14px;
+            z-index: 1000;
+        }
+
+        #logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-right: 40px;
+        }
+
+        button {
+            font-size: 14px;
+            padding: 20px;
+            font-family: Montserrat, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            background-color: #FFE8E5;
+            border-radius: 25px;
+            cursor: pointer;
+            height: 20px;
+            width: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border: none;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .text {
+            float: left;
+            font-size: 12px;
+            text-align: left;
+            margin-top: 1px;
+            justify-content: left;
+            margin-left: 10px;
+            margin-top: 50px;
+            margin-bottom: 100px;
+            z-index: 1080;
+        }
+
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+    </style>
+</head>
+<body>
+    {% load static %}
+    <!-- Seção do cabeçalho -->
+    <div id="header" style="display: flex; justify-content: space-between; align-items: center;">
+        <div id="logo-container">
+            <div id="logo-principal">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'logo\logoB.png' %}" alt="Logo Bloom" style="width: 60px; height: auto;">
+                </a>
+            </div>
+        </div>
+    
+        <div id="menu-buttons" style="display: flex; gap: 20px; margin-right: 25px;">
+            <button>
+                <a href={% url 'loginpadri'%} style="color: #423560;">Login Padrinho</a>
+            </button>
+            <button>
+                <a href={% url 'loginfunci'%} style="color: #423560;">Login Funcionário</a>
+            </button>
+        </div>
+    </div>
+    <div class="text">
+        <div class="text">
+            <p>Login > Selecionar > Menu Crianca > Álbum de recordações</p>
+        </div>
+        
+    </div>

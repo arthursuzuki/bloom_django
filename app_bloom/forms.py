@@ -40,4 +40,7 @@ class LoginPadrinhoForm(forms.ModelForm):
         except Padrinho.DoesNotExist:
             return False
 
-
+class ItemFilterForm(forms.Form):
+    nome = forms.CharField(required=False)
+    destinatario = forms.DecimalField(required=False, min_value=0)
+    mensagem = forms.DecimalField(required=False, min_value=0)

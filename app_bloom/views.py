@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-
+from django.http import JsonResponse
 from .forms import *
 
 
@@ -95,6 +95,34 @@ def desenvolvimentofunci(request):
         'name': 'Alterar Desenvolvimento'
     })
 
+def desenvolvimentopadri(request):
+    itens = FeedbackPadrinho.objects.all()
+    
+    # Aplicar filtros se o formulário for enviado
+    if request.method == 'GET':
+        form = ItemFilterForm(request.GET)
+        if form.is_valid():
+            nome = form.cleaned_data.get('nome')
+            destinatario = form.cleaned_data.get('destinatario')
+            mensagem = form.cleaned_data.get('mensagem')
+
+            # Aplicar filtros ao queryset
+            if nome:
+                itens = itens.filter(nome__icontains=nome)
+            if destinatario:
+                itens = itens.filter(preco__gte=destinatario)
+            if mensagem:
+                itens = itens.filter(preco__lte=mensagem)
+
+    else:
+        form = ItemFilterForm()
+
+    # Retornar dados JSON para atualização assíncrona
+    data = {
+        'itens': [{'nome': item.nome, 'descricao': item.destinatario, 'preco': item.mensagem} for item in itens]
+    }
+
+    return render(request, 'desenvolvimento.html', {'itens': itens, 'form': form, 'data': data})
 
 def feedbackpadrinho(request):
     if request.method == 'POST':

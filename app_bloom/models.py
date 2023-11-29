@@ -19,6 +19,7 @@ class Crianca(models.Model):
     
 class Recordacoes(models.Model):
     cpf = models.ForeignKey(Crianca, on_delete=models.CASCADE)
+    imagem_recordacao = models.ImageField(upload_to='recordacoes_imagens/')
 
 class Padrinho(models.Model):
     nome= models.CharField(max_length=100)
