@@ -78,7 +78,53 @@
             text-decoration: none;
             color: inherit;
         }
+        <style>
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+    
+            th, td {
+                border: 1px solid #dddddd;
+                text-align: left;
+                padding: 8px;
+            }
+    
+            img {
+                max-width: 100px;
+                max-height: 100px;
+            }
+            .dados-crianca {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            margin: 20px;
+            border: 1px solid #ccc;
+            background-color: #DA6CB3;
+            padding: 10px;
+            border-radius: 5px;
+        }
 
+        .dados-crianca img {
+            width: 100px; /* Ajuste conforme necessário */
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .tabela-container {
+            margin: 20px;
+            border: 1px solid #ccc;
+            background-color: #DA6CB3;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        </style>
     </style>
 </head>
 <body>
@@ -108,3 +154,23 @@
         </div>
         
     </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Imagem</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for crianca in criancas %}
+                    <tr>
+                        <td>{{ crianca.nome }}</td>
+                        <td><img src="{{ crianca.imagem.url }}" alt="{{ crianca.nome }}"></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

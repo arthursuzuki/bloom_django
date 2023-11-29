@@ -155,3 +155,7 @@ def cadastroCrianca(request):
 
 def finishfeedback(request):
     return render(request,'finishfeedback.html')
+
+def albumderecordacoes(request):
+    criancas = Recordacoes.objects.all()
+    return render(request, 'albumderecordacoes.html', {'criancas': criancas})
