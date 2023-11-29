@@ -1,3 +1,4 @@
+<!-- sua_pagina_especifica.html -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -5,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blo🌸m</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="icon" href="logo\Flor_logo.png">
+    <link rel="icon" href="{% static 'logo/Flor_logo.png' %}">
     <style>
         body {
             font-family: Montserrat, sans-serif;
@@ -55,15 +56,9 @@
         }
 
         .text {
-            float: left;
-            font-size: 12px;
-            text-align: left;
-            margin-top: 1px;
-            justify-content: left;
-            margin-left: 10px;
+            text-align: center;
             margin-top: 50px;
-            margin-bottom: 100px;
-            z-index: 1080;
+            margin-bottom: 20px;
         }
 
         .flex-center {
@@ -78,63 +73,29 @@
             text-decoration: none;
             color: inherit;
         }
-        <style>
-            table {
-                border-collapse: collapse;
-                width: 100%;
-            }
-    
-            th, td {
-                border: 1px solid #dddddd;
-                text-align: left;
-                padding: 8px;
-            }
-    
-            img {
-                max-width: 100px;
-                max-height: 100px;
-            }
-            .dados-crianca {
+
+        .imagem-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            margin-bottom: 20px;
-            margin: 20px;
-            border: 1px solid #ccc;
-            background-color: #DA6CB3;
-            padding: 10px;
-            border-radius: 5px;
         }
 
-        .dados-crianca img {
-            width: 100px; /* Ajuste conforme necessário */
-            height: auto;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        .tabela-container {
-            margin: 20px;
-            border: 1px solid #ccc;
-            background-color: #DA6CB3;
-            padding: 10px;
+        .imagem-container img {
+            max-width: 100%;
+            max-height: 100%;
             border-radius: 5px;
         }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 10px;
-        }
-        </style>
     </style>
 </head>
 <body>
     {% load static %}
+    
     <!-- Seção do cabeçalho -->
     <div id="header" style="display: flex; justify-content: space-between; align-items: center;">
         <div id="logo-container">
             <div id="logo-principal">
                 <a href="{% url 'home' %}">
-                    <img src="{% static 'logo\logoB.png' %}" alt="Logo Bloom" style="width: 60px; height: auto;">
+                    <img src="{% static 'logo/logoB.png' %}" alt="Logo Bloom" style="width: 60px; height: auto;">
                 </a>
             </div>
         </div>
@@ -148,29 +109,15 @@
             </button>
         </div>
     </div>
+
     <div class="text">
-        <div class="text">
-            <p>Login > Selecionar > Menu Crianca > Álbum de recordações</p>
-        </div>
-        
+        <h1>Álbum de recordações</h1>
+        <p>Login > Selecionar > Menu Criança > Álbum de recordações</p>
     </div>
-    <div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Imagem</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for crianca in criancas %}
-                    <tr>
-                        <td>{{ crianca.nome }}</td>
-                        <td><img src="{{ crianca.imagem.url }}" alt="{{ crianca.nome }}"></td>
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+
+    <div class="imagem-container">
+        <h2>{{ crianca.nome }}</h2>
+        <img src="{{ crianca.imagem.url }}" alt="{{ crianca.nome }}">
     </div>
 </body>
 </html>

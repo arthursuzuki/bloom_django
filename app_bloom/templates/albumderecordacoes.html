@@ -154,23 +154,32 @@
         </div>
         
     </div>
-    <div>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Imagem</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for crianca in recordacoes %}
+    <!-- seu_template.html -->
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Imagem</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for grupo in recordacoes %}
+                {% for crianca in grupo %}
                     <tr>
                         <td>{{ crianca.nome }}</td>
-                        <td><img src="{{ crianca.imagem.url }}" alt="{{ crianca.nome }}"></td>
+                        <td>
+                            <a href="{% url 'albumrecordacoesespecifico' crianca.id %}">
+                                <img src="{{ crianca.imagem.url }}" alt="{{ crianca.nome }}">
+                            </a>
+                        </td>
                     </tr>
                 {% endfor %}
-            </tbody>
-        </table>
-    </div>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+    
 </body>
 </html>

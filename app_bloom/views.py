@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect, get_object_or_404
 from django.http import JsonResponse
 from .forms import *
 
@@ -173,11 +173,26 @@ def finishfeedback(request):
     return render(request,'finishfeedback.html')
 
 def albumderecordacoes(request):
-    recordacoes = Recordacoes.objects.all()
-    return render(request, 'albumderecordacoes.html', {'recordacoes': recordacoes})
+    recordacoes = recordacoes.objects.all()
+
+    # Divida os registros em grupos de 5
+    records_por_pagina = 5
+    paginas = [recordacoes[i:i + records_por_pagina] for i in range(0, len(recordacoes), records_por_pagina)]
+
+    # Obtenha o número da página da consulta GET (se disponível)
+    page = request.GET.get('page', 1)
+
+    # Se a página for maior que o número total de páginas, retorne a última página
+    try:
+        current_page = paginas[int(page) - 1]
+    except IndexError:
+        current_page = paginas[-1]
+
+    return render(request, 'desenvolvimento.html', {'recordacoes': current_page})
 
 
-def albumderecordacoes(request):
-    recordacoes = Recordacoes.objects.all()
-    return render(request, 'album_foto_especifica.html', {'recordacoes': recordacoes})
+def albumderecordacoesepecificio(request):
+    crianca = get_object_or_404(Recordacoes, pk=cpf)
+
+    return render(request, 'album_foto_especifica.html', {'crianca': crianca})
 
