@@ -4,7 +4,7 @@
 <head>
     <!--<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-    <title>Perguntas Frequentes</title>
+    <title>Feedback</title>
     <link href='https://fonts.googleapis.com/css?family=Sen' rel='stylesheet'>
     <style>
         body {
@@ -242,11 +242,14 @@
     </div>
 
     <div class="container">
-    
-        <h1>Obrigado por deixar sua mensagem!</h1><img src="{% static 'imagens\florverde.png' %}" alt="FlorVerde" style="width: 60px; height: auto;">
-        <button>
+        <div class="faq-form-container">
+            <h1>Obrigado por deixar sua mensagem!</h1><img src="{% static 'imagens\florverde.png' %}" alt="FlorVerde" style="width: 60px; height: auto;">
+        </div>
+        <div class="faq-form-container">
+            <button>
             <a href={% url 'menucrianca2'%} style="color: #423560;">Voltar para o Menu</a>
         </button>
+        </div>
     </div>
 
 

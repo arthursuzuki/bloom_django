@@ -28,6 +28,7 @@ class Padrinho(models.Model):
     rg = models.CharField(max_length=10)
     profissao = models.CharField(max_length=40)
     reason = models.CharField(max_length=1000)
+    senha = models.CharField(max_length=20,default="12345678")
 
 class Pirralho(models.Model):
     nome = models.CharField(max_length=100)
