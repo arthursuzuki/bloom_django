@@ -109,13 +109,13 @@ O Bloom foi desenvolvido para atender às necessidades específicas da ONG Gotas
   </li>
   <li>
     <a
-      href=""
+      href="https://drive.google.com/file/d/1OYBGq7RwlSbDG-dRRWEq-9fiEV-HQ5bE/view?usp=sharing"
       >Quadro Jira</a
     >
   </li>
   <li>
     <a
-      href=""
+      href="https://drive.google.com/file/d/1Vwcuimy37A7HVFb-dNFXl9pX_py8JHOU/view?usp=sharing"
       >Backlog Jira</a
     >
   </li>
