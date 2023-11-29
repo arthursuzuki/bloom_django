@@ -1,5 +1,10 @@
-<h1 align="center">🌸 Bloom 🌸</h1>
-
+<p align="center">
+  <img
+    width="400"
+    display="inline-block"
+    src="./img/Logo.png"
+  />
+</p>
 
 <p>Bem-vindo ao repositório do Bloom, uma equipe que visa ajudar a ONG Gotas de Flor com Amor.
 </p>
