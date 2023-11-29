@@ -8,7 +8,7 @@ class Crianca(models.Model):
     genero = models.CharField(max_length=10, choices=[('Feminino', 'Feminino'),
                                                       ('Masculino', 'Masculino'
                                                        ), ('Outro', 'Outro')])
-    cpf = models.CharField(max_length=11)
+    cpf = models.CharField(max_length=11,unique=True)
     rg = models.CharField(max_length=20)
     endereco = models.CharField(max_length=100)
     historico_medico = models.FileField(upload_to='historicos/')
@@ -17,7 +17,8 @@ class Crianca(models.Model):
     def __str__(self):
         return self.nome
     
-
+class Recordacoes(models.Model):
+    cpf = models.ForeignKey(Crianca, on_delete=models.CASCADE)
 
 class Padrinho(models.Model):
     nome= models.CharField(max_length=100)
