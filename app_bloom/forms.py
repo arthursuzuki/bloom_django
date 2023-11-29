@@ -44,3 +44,9 @@ class ItemFilterForm(forms.Form):
     nome = forms.CharField(required=False)
     destinatario = forms.DecimalField(required=False, min_value=0)
     mensagem = forms.DecimalField(required=False, min_value=0)
+
+
+class AtividadesForm(forms.ModelForm):
+    class Meta:
+        model = Atividades
+        fields = ['mes', 'atividade', 'carga_horaria', 'avaliacao_red', 'avaliacao_yellow', 'avaliacao_green']

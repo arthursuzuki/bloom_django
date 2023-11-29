@@ -20,6 +20,7 @@ class Crianca(models.Model):
 class Recordacoes(models.Model):
     cpf = models.ForeignKey(Crianca, on_delete=models.CASCADE)
     imagem_recordacao = models.ImageField(upload_to='recordacoes_imagens/')
+    data = models.DateField(("Data"), auto_now=True, auto_now_add=False)
 
 class Padrinho(models.Model):
     nome= models.CharField(max_length=100)
@@ -44,3 +45,14 @@ class FeedbackPadrinho(models.Model):
     nome = models.CharField(max_length=100)
     destinatario = models.TextField(choices=destinatarioFeedback.choices)
     mensagem = models.CharField(max_length=1000)
+
+class Atividades(models.Model):
+    mes = models.CharField(max_length=255)
+    atividade = models.CharField(max_length=255)
+    carga_horaria = models.IntegerField()
+    avaliacao_red = models.IntegerField()
+    avaliacao_yellow = models.IntegerField()
+    avaliacao_green = models.IntegerField()
+
+    def _str_(self):
+        return f"{self.mes} - {self.atividade} - Atividades Realizadas"

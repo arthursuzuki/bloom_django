@@ -27,6 +27,12 @@ def criancas(request):
     })
 
 
+def recordacoes(request):
+    return render(request, 'recordacoes.html', context={
+        'name': 'Menu Criança'
+    })
+
+
 def menucrianca1(request):
     return render(request, 'menucrianca1.html', context={
         'name': 'Menu Criança'
@@ -94,32 +100,42 @@ def desenvolvimentofunci(request):
     return render(request, 'desenvolvimentofunci.html', context={
         'name': 'Alterar Desenvolvimento'
     })
-
 def desenvolvimentopadri(request):
-    itens = FeedbackPadrinho.objects.all()
+    itens = Atividades.objects.all()
     
     # Aplicar filtros se o formulário for enviado
     if request.method == 'GET':
-        form = ItemFilterForm(request.GET)
+        form = AtividadesForm(request.GET)
         if form.is_valid():
-            nome = form.cleaned_data.get('nome')
-            destinatario = form.cleaned_data.get('destinatario')
-            mensagem = form.cleaned_data.get('mensagem')
+            mes = form.cleaned_data.get('mes')
+            atividade = form.cleaned_data.get('atividade')
+            carga_horaria = form.cleaned_data.get('carga_horaria')
+            avaliacao_red = form.cleaned_data.get('avaliacao_red')
+            avaliacao_yellow = form.cleaned_data.get('avaliacao_yellow')
+            avaliacao_green = form.cleaned_data.get('avaliacao_green')
 
             # Aplicar filtros ao queryset
-            if nome:
-                itens = itens.filter(nome__icontains=nome)
-            if destinatario:
-                itens = itens.filter(preco__gte=destinatario)
-            if mensagem:
-                itens = itens.filter(preco__lte=mensagem)
+            if mes:
+                itens = itens.filter(mes__icontains=mes)
+            if atividade:
+                itens = itens.filter(atividade__icontains=atividade)
+            if carga_horaria:
+                itens = itens.filter(carga_horaria__gte=carga_horaria)
+            if avaliacao_red:
+                itens = itens.filter(avaliacao_red__lte=avaliacao_red)
+            if avaliacao_yellow:
+                itens = itens.filter(avaliacao_yellow__lte=avaliacao_yellow)
+            if avaliacao_green:
+                itens = itens.filter(avaliacao_green__lte=avaliacao_green)
 
     else:
-        form = ItemFilterForm()
+        form = AtividadesForm()
 
     # Retornar dados JSON para atualização assíncrona
     data = {
-        'itens': [{'nome': item.nome, 'descricao': item.destinatario, 'preco': item.mensagem} for item in itens]
+        'itens': [{'mes': item.mes, 'atividade': item.atividade, 'carga_horaria': item.carga_horaria,
+                   'avaliacao_red': item.avaliacao_red, 'avaliacao_yellow': item.avaliacao_yellow,
+                   'avaliacao_green': item.avaliacao_green} for item in itens]
     }
 
     return render(request, 'desenvolvimento.html', {'itens': itens, 'form': form, 'data': data})
@@ -157,5 +173,11 @@ def finishfeedback(request):
     return render(request,'finishfeedback.html')
 
 def albumderecordacoes(request):
-    criancas = Recordacoes.objects.all()
-    return render(request, 'albumderecordacoes.html', {'criancas': criancas})
+    recordacoes = Recordacoes.objects.all()
+    return render(request, 'albumderecordacoes.html', {'recordacoes': recordacoes})
+
+
+def albumderecordacoes(request):
+    recordacoes = Recordacoes.objects.all()
+    return render(request, 'album_foto_especifica.html', {'recordacoes': recordacoes})
+
