@@ -121,7 +121,7 @@ O Bloom foi desenvolvido para atender às necessidades específicas da ONG Gotas
   </li>
   <li>
     <a
-      href=""
+      href="https://drive.google.com/file/d/1aEctBcbkBRArBqXv3ZMr1wsKj3jWS2s-/view?usp=sharing"
       >Bug Tracker</a
     >
   </li>
