@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu da Criança</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #FAFAFA;
+}
+
+.header {
+    background-color: #DA6CB3;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.login-buttons {
+    display: flex;
+}
+
+.login-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.login-button.padrinhos {
+    background-color: #FFE8E5;
+    color: #423560;
+}
+
+.login-button.funcionarios {
+    background-color: #FFE8E5;
+    color: #423560;
+}
+
+.login-button:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumb {
+    text-align: left;
+    font-size: 0.8em;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.child-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 30px; 
+}
+
+.child-profile {
+    flex-basis: 40%; 
+    text-align: center;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.child-name, .child-age {
+    color: #333;
+}
+
+.menu-button {
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 25px;
+    background-color: #F8BBD0;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.menu-button.opcao {
+    background-color: #FFE8E5;
+    color: #423560;
+}
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" alt="Logotipo" class="logo"> <!-- Substitua logo.png pelo caminho do seu arquivo de logotipo -->
+        <div class="login-buttons">
+            <button class="login-button padrinhos">Login Padrinho</button>
+            <button class="login-button funcionarios">Login Funcionário</button>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <p>Login > Menu Funcionário > Selecionar > Menu criança</p>
+    </div>
+    <div class="child-menu">
+        <div class="child-profile">
+            <img src="profile-placeholder.png" alt="Perfil" class="profile-pic">
+            <p class="child-name">Nome: Bento Amorim</p>
+            <p class="child-age">Idade: 8 anos</p>
+        </div>
+        <div class="menu-options">
+            <button class="menu-button opcao">Desenvolvimento</button>
+            <button class="menu-button opcao">Álbum Recordações</button>
+        </div>
+    </div>
+</body>
+</html>
