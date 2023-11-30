@@ -207,18 +207,6 @@ def albumderecordacoes(request):
 
     return render(request, 'desenvolvimento.html', {'recordacoes': current_page})
 
-def albumrecordacoesfuncionario(request):
-    
-    return render(request, 'albumrecordacoesfuncionario', context={
-        name: 'Album de Recordacoes Funcionario'
-    })
-
-def menucriancafuncionario(request):
-    
-    return render(request, 'menucriancafuncionario', context={
-        name: 'Menu da Crianca Funcionario'
-    })
-
 def albumderecordacoesepecificio(request):
     crianca = get_object_or_404(Recordacoes, pk=cpf)
 
