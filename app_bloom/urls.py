@@ -24,7 +24,8 @@ urlpatterns = [
     path('menucriancafunci/<int:crianca_id>/', views.menucriancafunci, name='menucriancafunci'),
 
     path('desenvolvimentofunci/<int:crianca_id>/', views.desenvolvimentofunci, name='desenvolvimentofunci'),
-    path('album_recordacoes/<int:crianca_id>/', views.albumderecordacoes, name='album_recordacoes'),
+    path('album_recordacoes/<int:crianca_id>/', views.albumrecordacoes, name='albumrecordacoesnew'),
+    path('albumrecordacoes/',views.albumderecordacoesold,name='albumrecordacoes')
 ]
 
 
