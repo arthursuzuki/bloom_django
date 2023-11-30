@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chamada_Inicial</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #F8F2F7; /* Color based on image provided */
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .header {
+            display: flex;
+            justify-content: flex-end;
+            padding: 15px;
+            background: #DA6CB3;
+            display: flex;
+            justify-content: space-between; 
+        }
+
+        .header-logo {
+            height: 50px;
+            width: auto;
+            align-items: center;
+        }
+
+        .header-buttons button {
+            padding: 10px 20px; 
+            margin-left: 15px; 
+            border: none;
+            border-radius: 100px; 
+            background-color: white; 
+            color: black;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        /* Breadcrumbs */
+        t {
+            display: block;
+            color: black;
+            background-color: white; /* Adjusted to match the image provided */
+            padding: 5px 10px;
+            font-size: 0.9em;
+        }
+
+        /* Section Styles */
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .section h1 {
+            color: #6C567B; /* Adjusted to match the image provided */
+            margin-bottom: 20px;
+        }
+
+        /* Button Styles */
+        .time-slot {
+            background-color: #423560; /* Adjusted to match the image provided */
+            color: white;
+            border: none;
+            border-radius: 100px;
+            padding: 50px 100px;
+            margin: 10px;
+            cursor: pointer;
+            display: inline-block; /* Allows buttons to sit side by side */
+            font-size: 30px;    
+        }
+
+        /* Back Button */
+        .back-button {
+            background-color: #423560; /* Adjusted to match the image provided */
+            color: white;
+            border: none;
+            position: absolute;
+            bottom: 20px;
+            left: 50px;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .section h1 {
+            color: black;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="https://raw.githubusercontent.com/arthursuzuki/bloom_django/main/app_bloom/static/logo/logoB.png" alt="Your Logo" class="header-logo">
+            <div class="header-buttons">
+                <button>Login Padrinho</button>
+                <button>Login Funcionário</button>
+            </div>
+        </header>
+        <t>&nbsp;Login > Selecionar > Menu Funcionário > Chamada</t>
+        <div class="content">
+            <section class="section">
+                <h1>EU E O MUNDO</h1>
+                <button class="time-slot">MANHÃ</button>
+                <button class="time-slot">TARDE</button>
+            </section>
+            <section class="section">
+                <h1>NÓS E O MUNDO</h1>
+                <button class="time-slot">MANHÃ</button>
+                <button class="time-slot">TARDE</button>
+            </section>
+        </div>
+        <button class="back-button" onclick="window.history.back();">Voltar</button>
+    </div>
+</body>
+</html>
