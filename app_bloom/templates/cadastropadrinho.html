@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <style>
+        body {
+            font-family: Montserrat, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #header {
+            width: 100%;
+            background-color: #DA6CB3;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 14px;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #logo-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #links {
+            display: flex;
+            gap: 20px;
+            align-items: left;
+            justify-content: flex-start;
+            margin-left: 15px;
+        }
+
+        #links a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        form {
+            background-color: #FFE8E5;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            width: 800px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 70px; /* Espaçamento do formulário em relação ao cabeçalho */
+        }
+
+        .form-group {
+            width: calc(50% - 10px);
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .center {
+            width: 100%;
+            text-align: center;
+        }
+
+        .right {
+            width: 100%;
+            text-align: right;
+        }
+
+        button {
+            background-color: #DA6CB3;
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #C25DAA;
+        }
+    </style>
+</head>
+<body>
+    {% load static %}
+    <!-- Seção do cabeçalho -->
+    <div id="header">
+        <div id="logo-container">
+            <div id="logo-principal">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'logo\Logo.png' %}" alt="Logo Bloom" style="width: 150px; height: auto;">
+                </a>
+            </div>
+            
+            <div id="menu-buttons" style="display: flex; gap: 20px; margin-right: 25px;">
+                <div id="links">
+                    <a href="{% url 'sobre' %}">Sobre nós</a>
+                    <a href="{% url 'cadastropadrinho' %}">Cadastro Padrinho</a>
+                    <a href="{% url 'l_padrinho' %}">Apadrinhar</a>
+                    <a href="{% url 'l_padrinho' %}">Acompanhar Aluno</a>
+                    <a href="{% url 'doar' %}">Contribuir</a>
+                    <a href="{% url 'opc_login' %}">Login/Cadastro</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <form action="{% url 'sucessopadrinho' %}" method="post">
+        <div class="form-group">
+            <label for="nomeCompleto">Nome Completo:</label>
+            <input class="form-control-sm" type="text" id="nomeCompleto" name="nomeCompleto" required>
+
+            <label for="telefone">Número de Telefone:</label>
+            <input class="form-control-sm" type="tel" id="telefone" name="telefone" required>
+
+            <label for="endereco">Endereço:</label>
+            <input class="form-control-sm" type="text" id="endereco" name="endereco" required>
+
+            <label for="cpf">CPF:</label>
+            <input class="form-control-sm" type="text" id="cpf" name="cpf" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input class="form-control-sm" type="email" id="email" name="email" required>
+
+            <label for="rg">RG:</label>
+            <input class="form-control-sm" type="text" id="rg" name="rg" required>
+
+            <label for="senha">Senha:</label>
+            <input class="form-control-sm" type="password" id="senha" name="senha" required>
+
+            <label for="profissao">Profissão:</label>
+            <input class="form-control-sm" type="text" id="profissao" name="profissao" required>
+        </div>
+
+        <div class="center">
+            <label for="motivoCadastro">Motivo do Cadastro:</label>
+            <input class="form-control-sm" id="motivoCadastro" name="motivoCadastro" required>
+        </div>
+
+        <div class="right">
+            <button class="form-control-sm" type="submit" href="{% url 'home' %}">Enviar</button>
+        </div>
+    </form>
+
+</body>
+</html>
