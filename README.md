@@ -145,9 +145,6 @@ O Bloom foi desenvolvido para atender às necessidades específicas da ONG Gotas
   </li>
 </ul>
 
-## Screencast do site
-
-https://github.com/arthursuzuki/bloom_django/assets/132377213/93a8babc-e4db-48f7-b680-9483379adb72
 
 ## Links
 <ul>
