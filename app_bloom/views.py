@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect, get_object_or_404
 from django.http import JsonResponse
 from .forms import *
+from .models import DadosCrianca
 
 
 def menu(request):
@@ -97,9 +98,25 @@ def cadastropadrinho(request):
 
 
 def desenvolvimentofunci(request):
-    return render(request, 'desenvolvimentofunci.html', context={
-        'name': 'Alterar Desenvolvimento'
-    })
+    if request.method == 'POST':
+        mes = request.POST.get('mes')
+        atividade = request.POST.get('atividade_secao1')
+        carga_horaria = request.POST.get('carga')
+        desempenho = request.POST.get('desempenho_secao1')
+
+        # Salvar no banco de dados
+        DadosCrianca.objects.create(
+            mes=mes,
+            atividade=atividade,
+            carga_horaria=carga_horaria,
+            desempenho=desempenho
+        )
+
+        return redirect('desenvolvimentofunci')  # Redirecione para a página de sucesso
+
+    return render(request, 'desenvolvimentofunci.html')
+
+
 def desenvolvimentopadri(request):
     itens = Atividades.objects.all()
     

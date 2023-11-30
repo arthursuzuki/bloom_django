@@ -56,3 +56,10 @@ class Atividades(models.Model):
 
     def _str_(self):
         return f"{self.mes} - {self.atividade} - Atividades Realizadas"
+    
+
+class DadosCrianca(models.Model):
+    mes = models.CharField(max_length=255)
+    atividade = models.CharField(max_length=255)
+    carga_horaria = models.CharField(max_length=255)
+    desempenho = models.CharField(max_length=255)

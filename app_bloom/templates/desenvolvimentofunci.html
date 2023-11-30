@@ -114,7 +114,7 @@
             border-radius: 50%;
             margin-bottom: 10px;
         }   
-        .tabela-container {
+        .atividades-container {
             margin: 20px;
             border: 1px solid #ccc;
             background-color: #DA6CB3;
@@ -184,6 +184,46 @@
             width: 100px; /* Ajuste o valor conforme necessário */
         }
 
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            text-align: center;
+        }
+
+        .rectangle {
+            width: 800px;
+            height: 400px;
+            margin-bottom: 60px;
+            background: #FFE8E5;
+            border-radius: 9px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .submit-button {
+            font-size: 14px;
+            padding: 20px;
+            font-family: Montserrat, sans-serif;
+            font-weight: bold;
+            text-align: center;
+            background-color: #423560;
+            border-radius: 25px;
+            cursor: pointer;
+            height: 20px;
+            width: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border: none;
+            color: white;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        }
                             
     </style>
 </head>
@@ -208,124 +248,167 @@
             </button>
         </div>
     </div>
-    
-
-    <div class="dados-crianca">
-        <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" style="width: 60px; margin-right:10px;" class="rectangle" alt="Foto da Criança">
-        <p>Nome: Bento Amorim</p>
-    </div>
-    <div class="barra-navegacao">
-        <!-- Barra de navegação com botões para cada mês -->
-        <button onclick="mostrarTabela('Janeiro')">Janeiro</button>
-        <button onclick="mostrarTabela('Fevereiro')">Fevereiro</button>
-        <button onclick="mostrarTabela('Março')">Março</button>
-        <button onclick="mostrarTabela('Abril')">Abril</button>
-        <button onclick="mostrarTabela('Maio')">Maio</button>
-        <button onclick="mostrarTabela('Junho')">Junho</button>
-        <button onclick="mostrarTabela('Julho')">Julho</button>
-        <button onclick="mostrarTabela('Agosto')">Agosto</button>
-        <button onclick="mostrarTabela('Setembro')">Setembro</button>
-        <button onclick="mostrarTabela('Outubro')">Outubro</button>
-        <button onclick="mostrarTabela('Novembro')">Novembro</button>
-        <button onclick="mostrarTabela('Dezembro')">Dezembro</button>
-        <!-- Adicione botões para os outros meses aqui -->
-
-        <script>
-            function mostrarTabela(mes) {
-                // Oculta todas as tabelas
-                var tabelas = document.querySelectorAll('.tabela-container');
-                tabelas.forEach(function (tabela) {
-                    tabela.style.display = 'none';
-                });
-
-                // Exibe a tabela correspondente ao mês selecionado
-                var tabelaAtual = document.getElementById('tabela-' + mes);
-                if (tabelaAtual) {
-                    tabelaAtual.style.display = 'block';
-                }
-            }
-        </script>
-    </div>
-
-    <div class="tabela-container">
-        <h2>Atividades Realizadas</h2>
-
-        <table>
-            <tr>
-                <th></th>
-                <th>Capoeira</th>
-                <th>Coral</th>
-                <th>Vôlei</th>
-                <th>Futebol</th>
-                <th>Artes</th>
-                <th>Yoga</th>
-                <th>Meio Ambiente</th>
-                <th>Cidadania</th>
-            </tr>
-            <tr>
-                <th>Carga Horária</th>
-                <td contenteditable="true">6h</td>
-                <td contenteditable="true">8h</td>
-                <td contenteditable="true">6h</td>
-                <td contenteditable="true">4h</td>
-                <td contenteditable="true">6h</td>
-                <td contenteditable="true">10h</td>
-                <td contenteditable="true">6h</td>
-                <td contenteditable="true">5h</td>
-            </tr>
-            <tr>
-                <th style="position: relative;">
-                    <div class="circle red"></div>
-                </th>
-                <td contenteditable="true">2x</td>
-                <td contenteditable="true">4x</td>
-                <td contenteditable="true">1x</td>
-                <td contenteditable="true">4x</td>
-                <td contenteditable="true">0x</td>
-                <td contenteditable="true">1x</td>
-                <td contenteditable="true">3x</td>
-                <td contenteditable="true">1x</td>
-            </tr>
-            <tr>
-                <th style="position: relative;">
-                    <div class="circle yellow"></div>
-                </th>
-                <td contenteditable="true">2x</td>
-                <td contenteditable="true">4x</td>
-                <td contenteditable="true">1x</td>
-                <td contenteditable="true">4x</td>
-                <td contenteditable="true">0x</td>
-                <td contenteditable="true">1x</td>
-                <td contenteditable="true">3x</td>
-                <td contenteditable="true">1x</td>
-            </tr>
-            <tr>
-                <th style="position: relative;">
-                    <div class="circle green"></div>
-                </th>
-                <td contenteditable="true">2x</td>
-                <td contenteditable="true">4x</td>
-                <td contenteditable="true">1x</td>
-                <td contenteditable="true">4x</td>
-                <td contenteditable="true">0x</td>
-                <td contenteditable="true">1x</td>
-                <td contenteditable="true">3x</td>
-                <td contenteditable="true">1x</td>
-            </tr>
-        </table>
-        <div class="legenda">
-            <p>*Escala que representa o nível de satisfação da criança em cada atividade realizada por ela no mês selecionado.</p>
-        </div>
-        
-        
-    </div>
-    <button class="enviar" onclick="enviarAtualizacoes()">Enviar Atualizações</button>
 
     <script>
-        function enviarAtualizacoes() {
-            alert("Atualizações enviadas com sucesso!");
+        function togglePopup() {
+          var popup = document.getElementById('popup');
+          if (popup.style.display === 'block') {
+            popup.style.display = 'none';
+          } else {
+            popup.style.display = 'block';
+          }
         }
-    </script>
+        function redirectTo(url) {
+          window.location.href = url;
+        }
+  
+        var optionButtons = document.querySelectorAll('.option');
+  
+        optionButtons.forEach(function(button) {
+          button.addEventListener('click', function() {
+            optionButtons.forEach(function(btn) {
+              btn.classList.remove('selected');
+            });
+            button.classList.add('selected');
+          });
+        });
+      </script>
+    </div>
+  
+    <div class="flex-center" style="gap:40px;">
+        <div class="rectangle">
+        <section>
+          <h2>Desenvolvimento da Criança</h2>
+          <form action="{% url 'desenvolvimentofunci' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="roiResult" value="roiResult">
+
+            <div style="margin-top: 20px;">
+                <label for="mes">0. Escolha o mês:</label>
+                <select id="mes" name="mes">
+                  <option value="janeiro">Janeiro</option>
+                  <option value="Fevereiro">Fevereiro</option>
+                  <option value="marco">Março</option>
+                  <option value="abril">Abril</option>
+                  <option value="maio">Maio</option>
+                  <option value="junho">Junho</option>
+                  <option value="julho">Julho</option>
+                  <option value="agosto">Agosto</option>
+                  <option value="setembro">Setembro</option>
+                  <option value="outubro">Outubro</option>
+                  <option value="novembro">Novembro</option>
+                  <option value="dezembro">Dezembro</option>
+                </select>
+            </div>
+
+            <div style="margin-top: 20px;">
+                <label for="location">1. Qual a atividade que a criança fez?</label>
+                <div class="options">
+                    <input type="radio" name="atividade_secao1" id="capoeira" value="capoeira">
+                    <label for="capoeira">Capoeira</label>
+      
+                    <input type="radio" name="atividade_secao1" id="coral" value="coral">
+                    <label for="coral">Coral</label>
+      
+                    <input type="radio" name="atividade_secao1" id="volei" value="volei">
+                    <label for="volei">Vôlei</label>
+      
+                    <input type="radio" name="atividade_secao1" id="futebol" value="futebol">
+                    <label for="futebol">Futebol</label>
+      
+                    <input type="radio" name="atividade_secao1" id="artes" value="artes">
+                    <label for="artes">Artes</label>
+      
+                    <input type="radio" name="atividade_secao1" id="yoga" value="yoga">
+                    <label for="yoga">Yoga</label>
     
-</body>
+                    <input type="radio" name="atividade_secao1" id="meioambiente" value="meioambiente">
+                    <label for="meioambiente">Meio Ambiente</label>
+    
+                    <input type="radio" name="atividade_secao1" id="cidadania" value="cidadania">
+                    <label for="cidadania">Cidadania</label>
+                  </div>
+                </div>
+
+            <div style="margin-top: 20px;">
+                <label for="carga">2. Qual a carga horária?</label>
+                <input type="text" id="carga" name="carga">
+            </div>
+
+            <div style="margin-top: 20px;">
+                <label for="desempenho">3. Qual o desempenho dela nessa atividade?</label>
+                <div class="options">
+                <input type="radio" name="desempenho_secao1" id="otimo" value="otimo">
+                <label for="otimo">Ótimo</label>
+
+                <input type="radio" name="desempenho_secao1" id="regular" value="regular">
+                <label for="regular">Regular</label>
+
+                <input type="radio" name="desempenho_secao1" id="ruim" value="ruim">
+                <label for="ruim">Ruim</label>
+                </div>
+            </div>
+            <button type="submit" class="submit-button" onclick="return enviar()">Realizar Alterações</button>
+          </form>
+          <div id="resultado_roi" style="margin-top: 20px;"></div>
+        </section>
+    </div>
+    </div>
+  
+    <script>
+        function enviar() {
+            // Alterações nas variáveis de acordo com as mudanças no HTML
+            var mesSelecionado = document.obterMes('mes').value;
+            var atividadeSelecionada = obterAtividadeSelecionada('atividade_secao1');
+            var desempenhoSelecionado = obterDesempenhoSelecionado('desempenho_secao1');
+            var carga = document.getElementById('carga').value;
+        
+            // Verificações adicionais conforme necessário
+            if (!mesSelecionado) {
+                alert('Por favor, escolha um mês.');
+                return false;
+            }
+        
+            if (!atividadeSelecionada || !desempenhoSelecionado) {
+                alert('Selecione uma atividade e desempenho válidos para a seção 1.');
+                return false;
+            }
+        
+            // Adicionar verificações para outras seções conforme necessário
+        
+            return true;
+        }
+
+        function obterAtividadeSelecionada(name) {
+            var atividades = document.getElementsByName(name);
+            for (var i = 0; i < atividades.length; i++) {
+                if (atividades[i].checked) {
+                    return atividades[i].value; 
+                }
+            }
+            return null;  // Nenhuma atividade selecionada
+        }
+        
+        function obterDesempenhoSelecionado(name) {
+            var desempenhos = document.getElementsByName(name);
+            for (var i = 0; i < desempenhos.length; i++) {
+                if (desempenhos[i].checked) {
+                    return desempenhos[i].value;  // Retorna o valor do desempenho selecionado
+                }
+            }
+            return null;  // Nenhum desempenho selecionado
+        }
+
+        function obterMes(name) {
+            var desempenhos = document.getElementsByName(name);
+            for (var i = 0; i < desempenhos.length; i++) {
+                if (desempenhos[i].checked) {
+                    return desempenhos[i].value;  // Retorna o valor do desempenho selecionado
+                }
+            }
+            return null;  // Nenhum desempenho selecionado
+        }
+
+    </script>
+  </body>
 </html>
