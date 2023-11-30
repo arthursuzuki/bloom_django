@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Recordação</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <style>
+        body {
+            font-family: Montserrat, sans-serif;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+    
+    #header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #DA6CB3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 14px;
+    z-index: 1000;
+    }
+    
+    #logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 40px;
+    }
+
+    .login-buttons{
+        display: flex;
+        gap: 20px;
+        margin-right: 25px;
+    }
+
+    .login-button{
+        font-size: 14px;
+        padding: 20px;
+        font-family: Montserrat, sans-serif;
+        font-weight: bold;
+        text-align: center;
+        background-color: #FFE8E5;
+        border-radius: 25px;
+        cursor: pointer;
+        height: 20px;
+        width: 170px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border: none;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        color: #423560;
+    }
+    
+    .text {
+    float: left;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 1px;
+    justify-content: left;
+    margin-left: 10px;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    z-index: 1080;
+    }
+    
+    .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    }
+    
+    a {
+    text-decoration: none;
+    color: inherit;
+    }
+    
+    
+    .breadcrumb {
+    text-align: left;
+    font-size: 1.0em;
+    padding: 10px;
+    background-color: transparent;
+    }
+
+    .child-profile {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 20px; 
+        background-color: #FBE9E7;
+        border-radius: 10px; 
+        margin-right: auto; 
+        width: fit-content; 
+    }
+    </style>
+</head>
+<body>
+    <div id="header" style="display: flex; justify-content: space-between; align-items: center;">
+        <div id="logo-container">
+            <div id="logo-principal">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'logo\logoB.png' %}" alt="Logo Bloom" style="width: 60px; height: auto;">
+                </a>
+            </div>
+        </div>
+    
+        <div class="login-buttons">
+            <button class="login-button">
+                <a href={% url 'loginpadri'%}>Login Padrinho</a>
+            </button>
+            <button class="login-button">
+                <a href={% url 'loginfunci'%}>Login Funcionário</a>
+            </button>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <p>Login > Menu Funcionário > Selecionar > Adicionar recordação</p>
+    </div>
+
+    <div class="content">
+        <div class="form-container">
+            <h1>ADICIONAR RECORDAÇÃO</h1>
+            <div class="child-profile">
+                <img src="imagem_crianca.png" alt="Imagem da criança" class="child-image">
+                <p>Nome: Bento Amorim</p>
+                <p>Idade: 10 anos</p>
+            </div>
+            <form method="post" enctype="multipart/form-data">
+                <input type="file" name="imagens" multiple>
+                <input type="date" name="data">
+                <textarea name="comentario" placeholder="Escreva aqui um comentário..."></textarea>
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
