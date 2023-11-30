@@ -173,7 +173,7 @@ https://github.com/arthursuzuki/bloom_django/assets/132377213/93a8babc-e4db-48f7
   </li>
   <li>
     <a
-      href="https://bloomg9.azurewebsites.net/"
+      href="https://equipebloom.azurewebsites.net/"
       >AZURE</a>
   </li>
   <li>
