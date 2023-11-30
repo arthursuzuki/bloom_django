@@ -267,46 +267,16 @@
         </div>
     </div> 
 
-    <form>
-        <div class="form-group">
-            <label for="nomeCompleto">Nome Completo:</label>
-            <input class="form-control-sm" type="text" id="nomeCompleto" name="nomeCompleto" required>
-
-            <label for="telefone">Número de Telefone:</label>
-            <input class="form-control-sm" type="tel" id="telefone" name="telefone" required>
-
-            <label for="endereco">Endereço:</label>
-            <input class="form-control-sm" type="text" id="endereco" name="endereco" required>
-
-            <label for="cpf">CPF:</label>
-            <input class="form-control-sm" type="text" id="cpf" name="cpf" required>
-        </div>
-
-        <div class="form-group">
-            <label for="email">E-mail:</label>
-            <input class="form-control-sm" type="email" id="email" name="email" required>
-
-            <label for="rg">RG:</label>
-            <input class="form-control-sm" type="text" id="rg" name="rg" required>
-
-            <label for="senha">Senha:</label>
-            <input class="form-control-sm" type="password" id="senha" name="senha" required>
-
-            <label for="profissao">Profissão:</label>
-            <input class="form-control-sm" type="text" id="profissao" name="profissao" required>
-        </div>
-
-        <div class="center">
-            <label for="motivoCadastro">Motivo do Cadastro:</label>
-            <input class="form-control-sm" id="motivoCadastro" name="motivoCadastro" required>
-        </div>
-
+    <form method="post" action="{% url 'cadastropadrinho' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+    
         <div class="right">
-            <button>
-                <a href={% url 'home'%}>Enviar</a>
-            </button>
+            <button type="submit">Enviar</button>
         </div>
     </form>
+    
+    
 
 </body>
 </html>

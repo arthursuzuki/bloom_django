@@ -93,30 +93,37 @@ def menualterar(request):
     })
 
 def cadastropadrinho(request):
-    return render(request, 'cadastropadrinho.html', context={
-        'name': 'Cadastro Padrinho'
-    })
+    if request.method == 'POST':
+        form = PadrinhoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('/')
+    else:
+        form = PadrinhoForm()
+
+    return render(request, 'cadastropadrinho.html', {'form': form, 'name': 'Cadastro Padrinho'})
 
 
-def desenvolvimentofunci(request):
-    crianca = Crianca.objects.get(pk=crianca_id)
+def desenvolvimentofunci(request, crianca_id):
+    crianca = get_object_or_404(Crianca, pk=crianca_id)
+
     if request.method == 'POST':
         mes = request.POST.get('mes')
         atividade = request.POST.get('atividade_secao1')
         carga_horaria = request.POST.get('carga')
         desempenho = request.POST.get('desempenho_secao1')
 
-        # Salvar no banco de dados
+        # Salvar no banco de dados associando com a criança
         DadosCrianca.objects.create(
+            crianca=crianca,
             mes=mes,
             atividade=atividade,
             carga_horaria=carga_horaria,
             desempenho=desempenho
         )
 
-        return redirect('desenvolvimentofunci',{'crianca': crianca})  # Redirecione para a página de sucesso
+    return render(request, 'desenvolvimentofunci.html', {'crianca': crianca})
 
-    return render(request, 'desenvolvimentofunci.html')
 
 
 def desenvolvimentopadri(request):
