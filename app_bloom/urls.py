@@ -25,7 +25,13 @@ urlpatterns = [
     path('menucriancafunciold', views.menucriancafunciold, name='menucriancafunciold'),
     path('desenvolvimentofunci/<int:crianca_id>/', views.desenvolvimentofunci, name='desenvolvimentofunci'),
     path('album_recordacoes/<int:crianca_id>/', views.albumrecordacoes, name='albumrecordacoesnew'),
-    path('albumrecordacoes/',views.albumderecordacoesold,name='albumrecordacoes')
+    path('albumrecordacoes/',views.albumderecordacoesold,name='albumrecordacoes'),
+    path('eumanha', views.eumanha, name='eumanha'),
+    path('menuchamada', views.menuchamada, name='menuchamada'),
+    path('fimchamada', views.fimchamada, name='fimchamada'),
+    path('eutarde', views.eutarde, name='eutarde'),
+    path('nosmanha', views.nosmanha, name='nosmanha'),
+    path('nostarde', views.nostarde, name='nostarde'),
 ]
 
 

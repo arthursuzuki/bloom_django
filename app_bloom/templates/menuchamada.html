@@ -118,13 +118,13 @@
         <div class="content">
             <section class="section">
                 <h1>EU E O MUNDO</h1>
-                <button class="time-slot">MANHÃ</button>
-                <button class="time-slot">TARDE</button>
+                <a href="{% url 'eumanha' %}"><button class = "time-slot">MANHÃ</button></a>
+                <a href="{% url 'eutarde' %}"><button class = "time-slot">TARDE</button></a>
             </section>
             <section class="section">
                 <h1>NÓS E O MUNDO</h1>
-                <button class="time-slot">MANHÃ</button>
-                <button class="time-slot">TARDE</button>
+                <a href="{% url 'nosmanha' %}"><button class = "time-slot">MANHÃ</button></a>
+                <a href="{% url 'nostarde' %}"><button class = "time-slot">TARDE</button></a>
             </section>
         </div>
         <button class="back-button" onclick="window.history.back();">Voltar</button>

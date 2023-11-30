@@ -226,3 +226,33 @@ def albumderecordacoesold(request):
     except IndexError:
         current_page = paginas[-1]
     return render(request, 'albumderecordacoes.html', {'recordacoes': current_page})
+
+def eumanha(request):
+    context = {
+    }
+    return render(request, 'eumanha.html', context)
+
+def menuchamada(request):
+    context = {
+    }
+    return render(request, 'menuchamada.html', context) 
+
+def fimchamada(request):
+    context = {
+    }
+    return render(request, 'fimchamada.html', context) 
+
+def eutarde(request):
+    context = {
+    }
+    return render(request, 'eutarde.html', context) 
+
+def nosmanha(request):
+    context = {
+    }
+    return render(request, 'nosmanha.html', context) 
+
+def nostarde(request):
+    context = {
+    }
+    return render(request, 'nostarde.html', context) 
