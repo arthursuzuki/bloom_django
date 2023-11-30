@@ -141,7 +141,7 @@
     <div class="album-container">
         <h1>ÁLBUM DE RECORDAÇÕES</h1>
         <div class="child-menu">
-            <img src="child-icon.png" alt="Ícone da criança" class="child-icon"> <!-- Substitua child-icon.png pelo caminho do arquivo real -->
+            <img src="https://raw.githubusercontent.com/arthursuzuki/bloom_django/main/app_bloom/static/logo/user.png" alt="Ícone da criança" class="child-icon"> <!-- Substitua child-icon.png pelo caminho do arquivo real -->
             <div class="child-info">
                 <p class="child-name">Nome: Bento Amorim</p>
                 <p class="child-age">Idade: 8 anos</p>
