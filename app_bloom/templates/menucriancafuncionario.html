@@ -119,16 +119,22 @@
     <div class="breadcrumb">
         <p>Login > Menu Funcionário > Selecionar > Menu criança</p>
     </div>
+    
     <div class="child-menu">
         <div class="child-profile">
             <img src="profile-placeholder.png" alt="Perfil" class="profile-pic">
-            <p class="child-name">Nome: Bento Amorim</p>
-            <p class="child-age">Idade: 8 anos</p>
+            <p class="child-name">Nome: {{ crianca.nome }}</p>
         </div>
-        <div class="menu-options">
+        <!-- Add additional details as needed -->
+    </div>
+    
+    <div class="menu-options">
+        <a href="{% url 'desenvolvimentofunci' crianca.id %}">
             <button class="menu-button opcao">Desenvolvimento</button>
-            <button class="menu-button opcao">Álbum de recordacoes</button>
-        </div>
+        </a>
+        <a href="{% url 'album_recordacoes' crianca.id %}">
+            <button class="menu-button opcao">Álbum de recordações</button>
+        </a>
     </div>
 </body>
 </html>

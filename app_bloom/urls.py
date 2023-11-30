@@ -20,7 +20,11 @@ urlpatterns = [
     path('finishfeedback',views.finishfeedback,name='finishfeedback'),
     path('cadastropadrinho', views.cadastropadrinho, name='cadastropadrinho'),
     path('desenvolvimento',views.desenvolvimentopadri,name='desenvolvimento'),
-    path('albumrecordacoes',views.albumderecordacoes,name='albumrecordacoes'),
-    path('albumrecordacoesespecifico/<int:crianca_id>/', views.albumderecordacoesepecificio, name='albumrecordacoesespecifico')
+    path('albumrecordacoesespecifico/<int:crianca_id>/', views.albumderecordacoesepecificio, name='albumrecordacoesespecifico'),
+    path('menucriancafunci/<int:crianca_id>/', views.menucriancafunci, name='menucriancafunci'),
+
+    path('desenvolvimentofunci/<int:crianca_id>/', views.desenvolvimentofunci, name='desenvolvimentofunci'),
+    path('album_recordacoes/<int:crianca_id>/', views.albumderecordacoes, name='album_recordacoes'),
 ]
+
 

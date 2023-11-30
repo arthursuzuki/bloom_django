@@ -50,3 +50,14 @@ class AtividadesForm(forms.ModelForm):
     class Meta:
         model = Atividades
         fields = ['mes', 'atividade', 'carga_horaria', 'avaliacao_red', 'avaliacao_yellow', 'avaliacao_green']
+
+class CadastroCriancaForm(forms.ModelForm):
+    class Meta:
+        model = Crianca
+        fields = '__all__'
+
+
+class SelecionarTelaForm(forms.ModelForm):
+    class Meta:
+        model = Crianca
+        fields = ['nome']

@@ -59,6 +59,7 @@ def cadastroCrianca(request):
         if form.is_valid():
             form.save()
             success_message = "Os dados foram enviados com sucesso!"
+            
     else:
         form = CriancaForm()
     return render(request, 'cadastrocrianca.html', {
@@ -81,9 +82,9 @@ def loginpadri(request):
 
 
 def selecionar(request):
-    return render(request, 'selecionar.html', context={
-        'name': 'Selecionar Criança'
-    })
+    criancas = Crianca.objects.all()
+    context = {'criancas': criancas}
+    return render(request, 'selecionar.html', context)
 
 
 def menualterar(request):
@@ -98,6 +99,7 @@ def cadastropadrinho(request):
 
 
 def desenvolvimentofunci(request):
+    crianca = Crianca.objects.get(pk=crianca_id)
     if request.method == 'POST':
         mes = request.POST.get('mes')
         atividade = request.POST.get('atividade_secao1')
@@ -112,7 +114,7 @@ def desenvolvimentofunci(request):
             desempenho=desempenho
         )
 
-        return redirect('desenvolvimentofunci')  # Redirecione para a página de sucesso
+        return redirect('desenvolvimentofunci',{'crianca': crianca})  # Redirecione para a página de sucesso
 
     return render(request, 'desenvolvimentofunci.html')
 
@@ -173,12 +175,12 @@ def feedbackpadrinho(request):
 def cadastroCrianca(request):
     success_message = None
     if request.method == 'POST':
-        form = CriancaForm(request.POST, request.FILES)
+        form = CadastroCriancaForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
             success_message = "Os dados foram enviados com sucesso!"
     else:
-        form = CriancaForm()
+        form = CadastroCriancaForm()
     return render(request, 'cadastrocrianca.html', {
         'form': form,
         'success_message': success_message,
@@ -212,3 +214,6 @@ def albumderecordacoesepecificio(request):
 
     return render(request, 'album_foto_especifica.html', {'crianca': crianca})
 
+def menucriancafunci(request, crianca_id):
+    crianca = Crianca.objects.get(pk=crianca_id)
+    return render(request, 'menucriancafuncionario.html', {'crianca': crianca})

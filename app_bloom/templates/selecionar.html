@@ -165,97 +165,21 @@
     <i><h1 class="flex-center">CRIANÇAS</h1></i>
 
     <div class="container flex-center">
-        <div class="coluna">
-            <a>
-                <div class="item">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="rectangle" alt="Imagem 1">
-                    <div>
-                        <p class="conteudo" style="text-align: left;">Nome: Alice Moreira</p>
-                        <p class="conteudo" style="text-align: left;">Idade: 7 anos</p>
+        {% for crianca in criancas %}
+            <div class="coluna">
+                <a href="{% url 'menucriancafunci' crianca.id %}">
+                    <div class="item">
+                        <img src="{{ crianca.foto }}" class="rectangle" alt="Imagem 1">
+                        <div>
+                            <p class="conteudo" style="text-align: left;">Nome: {{ crianca.nome }}</p>
+                        </div>
                     </div>
-                </div>
-            </a>
-        </div>
-        <div class="coluna">
-            <a>
-                <div class="item">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="rectangle" alt="Imagem 1">
-                    <div>
-                        <p class="conteudo" style="text-align: left;">Nome: Caio Pontual</p>
-                        <p class="conteudo" style="text-align: left;">Idade: 10 anos</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        
-        <div class="coluna">
-            <a href={% url 'menualterar'%}>
-                <div class="item">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="rectangle" alt="Imagem 1">
-                    <div>
-                        <p class="conteudo" style="text-align: left;">Nome: Bento Amorim</p>
-                        <p class="conteudo" style="text-align: left;">Idade: 8 anos</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="coluna">
-            <a>
-                <div class="item">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="rectangle" alt="Imagem 1">
-                    <div>
-                        <p class="conteudo" style="text-align: left;">Nome: Helena Cunha</p>
-                        <p class="conteudo" style="text-align: left;">Idade: 6 anos</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="coluna">
-            <a>
-                <div class="item">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="rectangle" alt="Imagem 1">
-                    <div>
-                        <p class="conteudo" style="text-align: left;">Nome: Beatriz Viana</p>
-                        <p class="conteudo" style="text-align: left;">Idade: 8 anos</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="coluna">
-            <a>
-                <div class="item">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="rectangle" alt="Imagem 1">
-                    <div>
-                        <p class="conteudo" style="text-align: left;">Nome: João Victor Vila</p>
-                        <p class="conteudo" style="text-align: left;">Idade: 5 anos</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-
-        <div class="coluna">
-            <a>
-                <div class="item">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="rectangle" alt="Imagem 1">
-                    <div>
-                        <p class="conteudo" style="text-align: left;">Nome: Caio Jordão</p>
-                        <p class="conteudo" style="text-align: left;">Idade: 6 anos</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-        <div class="coluna">
-            <a>
-                <div class="item">
-                    <img src="https://cdn-icons-png.flaticon.com/512/1946/1946429.png" class="rectangle" alt="Imagem 1">
-                    <div>
-                        <p class="conteudo" style="text-align: left;">Nome: Júlia Amorim</p>
-                        <p class="conteudo" style="text-align: left;">Idade: 8 anos</p>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </div>    
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+    
+    
+    
 </body>
 </html>

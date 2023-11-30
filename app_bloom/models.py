@@ -13,6 +13,19 @@ class Crianca(models.Model):
     endereco = models.CharField(max_length=100)
     historico_medico = models.FileField(upload_to='historicos/')
     autorizacao_responsavel = models.FileField(upload_to='autorizacoes/')
+    foto = models.FileField(upload_to='fotocrianca/')
+    naturalidade = models.CharField(max_length=100)
+    estado = models.CharField(max_length=50)
+    identidade = models.CharField(max_length=20)
+    dt_expedicao_ident = models.DateField()
+    orgao_expeditor = models.CharField(max_length=50)
+    cidade = models.CharField(max_length=100)
+    cep = models.IntegerField()
+
+    raca = models.CharField(max_length=50, choices=[('Preto', 'Preto'), ('Branca', 'Branca'), ('Parda', 'Parda'), ('Amarela', 'Amarela'),('Outra','Outra')])
+    telefone_responsavel = models.IntegerField()
+
+
 
     def __str__(self):
         return self.nome
