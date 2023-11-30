@@ -113,12 +113,14 @@
         </div>
     
         <div id="menu-buttons" style="display: flex; gap: 20px; margin-right: 25px;">
-            <button>
-                <a href={% url 'loginpadri'%} style="color: #423560;">Login Padrinho</a>
-            </button>
-            <button>
-                <a href={% url 'loginfunci'%} style="color: #423560;">Login Funcionário</a>
-            </button>
+            <div id="links">
+                <a href="{% url 'sobre' %}">Sobre nós</a>
+                <a href="{% url 'cadastropadrinho' %}">Cadastro Padrinho</a>
+                <a href="{% url 'l_padrinho' %}">Apadrinhar</a>
+                <a href="{% url 'l_padrinho' %}">Acompanhar Aluno</a>
+                <a href="{% url 'doar' %}">Contribuir</a>
+                <a href="{% url 'opc_login' %}">Login/Cadastro</a>
+            </div>
         </div>
     </div>
     
