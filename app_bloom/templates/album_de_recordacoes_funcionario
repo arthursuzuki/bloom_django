@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Álbum de Recordações - Funcionário</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+.header {
+    background-color: #DA6CB3;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    height: auto;
+}
+
+.login-buttons {
+    display: flex;
+}
+
+.login-button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.login-button.padrinhos {
+    background-color: #FFE8E5;
+    color: #423560;
+}
+
+.login-button.funcionarios {
+    background-color: #FFE8E5;
+    color: #423560;
+}
+
+.login-button:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.breadcrumb {
+    text-align: left;
+    font-size: 1.0em;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.child-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.child-menu {
+    display: flex;
+    justify-content: center; /* Centraliza o conteúdo horizontalmente */
+    align-items: center; /* Alinha os itens verticalmente */
+    margin-bottom: 20px; /* Espaço abaixo do perfil da criança */
+}
+
+.child-pic {
+    margin-right: 10px; 
+}
+
+.child-icon {
+    /* Ajuste a largura do ícone conforme necessário */
+    width: 100px; /* Exemplo de tamanho, ajuste conforme necessário */
+    height: auto;
+    margin-right: 15px; /* Espaço à direita do ícone da criança */
+}
+.child-name,
+.child-age {
+    margin: 5px 0; /* Adiciona um espaçamento vertical entre o nome e a idade */
+    color: #333;
+}
+
+.ordenar-dropdown {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.album-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.album-container h1 {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px;
+}
+
+.album-photos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.photo {
+    width: 150px; /* Largura de cada foto */
+    margin-bottom: 10px; /* Espaço abaixo de cada foto */
+    text-align: center; /* Para centralizar a data abaixo da foto */
+}
+
+.photo img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner .photo */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.photo-date {
+    font-size: 0.8em;
+    margin-top: 5px; /* Espaço acima da data */
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://raw.githubusercontent.com/arthursuzuki/bloom_django/main/app_bloom/static/logo/logoB.png" alt="Logotipo" class="logo"> <!-- Substitua logo.png pelo caminho do seu arquivo de logotipo -->
+        <div class="login-buttons">
+            <button class="login-button padrinhos">Login Padrinho</button>
+            <button class="login-button funcionarios">Login Funcionário</button>
+        </div>
+    </div>
+    <div class="breadcrumb">
+        <p>Login > Menu Funcionário > Selecionar > Menu criança</p>
+    </div>
+
+    <div class="album-container">
+        <h1>ÁLBUM DE RECORDAÇÕES</h1>
+        <div class="child-menu">
+            <img src="child-icon.png" alt="Ícone da criança" class="child-icon"> <!-- Substitua child-icon.png pelo caminho do arquivo real -->
+            <div class="child-info">
+                <p class="child-name">Nome: Bento Amorim</p>
+                <p class="child-age">Idade: 8 anos</p>
+            </div>
+        </div>
+        <div class="album-controls">
+            <select name="ordenar" class="ordenar-dropdown">
+                <option value="adicao">adição</option>
+                <!-- Dá para adicionar outras opções aqui -->
+            </select>
+            <button class="add-photo-button">Adicionar fotos</button>
+        </div>
+        <div class="album-photos">
+            <div class="photo"> <!-- Aqui pode duplicar a classe foto quando o botão for pressionado -->
+                <img src="album-photo-placeholder.png" alt="Foto do Álbum"> <!-- Substituir pela foto static do arquivo -->
+                <p class="photo-date">30.12.2023</p> <!-- Data de quando a foto foi tirada -->
+            </div>
+        </div>   
+    </div>
+</body>
+</html>
