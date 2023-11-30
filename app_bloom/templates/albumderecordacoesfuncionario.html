@@ -62,9 +62,13 @@
 
 .child-menu {
     display: flex;
-    justify-content: center; /* Centraliza o conteúdo horizontalmente */
-    align-items: center; /* Alinha os itens verticalmente */
-    margin-bottom: 20px; /* Espaço abaixo do perfil da criança */
+    flex-direction: column;
+    align-items: flex-start; /* Alinha os itens à esquerda */
+    padding-left: 20px; /* Espaço à esquerda do perfil da criança */
+    background-color: #FBE9E7; /* Cor de fundo do perfil da criança */
+    border-radius: 10px; /* Borda arredondada para o fundo */
+    margin-right: auto; /* Empurra o restante do conteúdo para a direita */
+    width: fit-content; /* Ajusta a largura ao conteúdo */
 }
 
 .child-pic {
