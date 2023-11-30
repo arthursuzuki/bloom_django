@@ -127,7 +127,7 @@ O Bloom foi desenvolvido para atender às necessidades específicas da ONG Gotas
   </li>
   <li>
     <a
-      href="https://drive.google.com/file/d/1aEctBcbkBRArBqXv3ZMr1wsKj3jWS2s-/view?usp=sharing"
+      href="https://drive.google.com/file/d/1SEmUPBpVIAUjWm4YrRaulOpCzXe-UJAq/view?usp=sharing"
       >Bug Tracker</a
     >
   </li>
@@ -139,7 +139,7 @@ O Bloom foi desenvolvido para atender às necessidades específicas da ONG Gotas
   </li>
   <li>
     <a
-      href=""
+      href="https://www.youtube.com/watch?v=EkKOqothtC8"
       >Screencast dos Testes</a
     >
   </li>
@@ -208,10 +208,6 @@ O Bloom foi desenvolvido para atender às necessidades específicas da ONG Gotas
   <img
     src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"
     alt="CSS3"
-  />
-  <img
-    src="https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white"
-    alt="Bootstrap"
   />
   <img
     src="https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white"
