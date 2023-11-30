@@ -76,7 +76,7 @@ O Bloom foi desenvolvido para atender às necessidades específicas da ONG Gotas
   <li>
     <a
       href="https://drive.google.com/file/d/1fa4vZlTdy5MJFJeCskQlPPv1fIesja2g/view?usp=sharing"
-      >Bug Tracker</a
+      >Issue/Bug Tracker</a
     >
   </li>
   <li>
@@ -128,7 +128,7 @@ O Bloom foi desenvolvido para atender às necessidades específicas da ONG Gotas
   <li>
     <a
       href="https://drive.google.com/file/d/1SEmUPBpVIAUjWm4YrRaulOpCzXe-UJAq/view?usp=sharing"
-      >Bug Tracker</a
+      >Issue/Bug Tracker</a
     >
   </li>
   <li>
