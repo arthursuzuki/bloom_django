@@ -156,7 +156,7 @@
         </div>
         <div class="album-photos">
             <div class="photo"> <!-- Aqui pode duplicar a classe foto quando o botão for pressionado -->
-                <img src="album-photo-placeholder.png" alt="Foto do Álbum"> <!-- Substituir pela foto static do arquivo -->
+                <img src="https://raw.githubusercontent.com/arthursuzuki/bloom_django/main/app_bloom/static/logo/fotoAlbum.png" alt="Foto do Álbum"> <!-- Substituir pela foto static do arquivo -->
                 <p class="photo-date">30.12.2023</p> <!-- Data de quando a foto foi tirada -->
             </div>
         </div>   
