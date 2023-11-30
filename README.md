@@ -121,7 +121,7 @@ O Bloom foi desenvolvido para atender às necessidades específicas da ONG Gotas
   </li>
   <li>
     <a
-      href=""
+      href="https://drive.google.com/file/d/1aEctBcbkBRArBqXv3ZMr1wsKj3jWS2s-/view?usp=sharing"
       >Bug Tracker</a
     >
   </li>
@@ -139,15 +139,12 @@ O Bloom foi desenvolvido para atender às necessidades específicas da ONG Gotas
   </li>
   <li>
     <a
-      href="https://drive.google.com/file/d/13PTy0b6ZAYB-kR-qeSq6ich9_sC_Ck7S/view?usp=sharing"
+      href="https://drive.google.com/file/d/1r1whyk9RUvmUSYCjBpV0iD_IjAC6cZtY/view?usp=sharing"
       >Sketches e Storyboards</a
     >
   </li>
 </ul>
 
-## Screencast do site
-
-https://github.com/arthursuzuki/bloom_django/assets/132377213/93a8babc-e4db-48f7-b680-9483379adb72
 
 ## Links
 <ul>
