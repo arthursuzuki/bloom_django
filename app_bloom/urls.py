@@ -21,6 +21,8 @@ urlpatterns = [
     path('cadastropadrinho', views.cadastropadrinho, name='cadastropadrinho'),
     path('desenvolvimento',views.desenvolvimentopadri,name='desenvolvimento'),
     path('albumrecordacoes',views.albumderecordacoes,name='albumrecordacoes'),
+    path('albumrecordacoesfuncionario',views.albumderecordacoesfuncionario,name='albumrecordacoesfuncionario'),
+    path('menucriancafuncionario',views.menucriancafuncionario,name='menucriancafuncionario'),
     path('albumrecordacoesespecifico/<int:crianca_id>/', views.albumderecordacoesepecificio, name='albumrecordacoesespecifico')
 ]
 
