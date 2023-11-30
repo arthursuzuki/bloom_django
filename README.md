@@ -139,7 +139,7 @@ O Bloom foi desenvolvido para atender às necessidades específicas da ONG Gotas
   </li>
   <li>
     <a
-      href="https://drive.google.com/file/d/13PTy0b6ZAYB-kR-qeSq6ich9_sC_Ck7S/view?usp=sharing"
+      href="https://drive.google.com/file/d/1r1whyk9RUvmUSYCjBpV0iD_IjAC6cZtY/view?usp=sharing"
       >Sketches e Storyboards</a
     >
   </li>
