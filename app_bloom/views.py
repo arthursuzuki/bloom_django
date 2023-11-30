@@ -134,34 +134,18 @@ def desenvolvimentopadri(request):
         form = AtividadesForm(request.GET)
         if form.is_valid():
             mes = form.cleaned_data.get('mes')
-            atividade = form.cleaned_data.get('atividade')
-            carga_horaria = form.cleaned_data.get('carga_horaria')
-            avaliacao_red = form.cleaned_data.get('avaliacao_red')
-            avaliacao_yellow = form.cleaned_data.get('avaliacao_yellow')
-            avaliacao_green = form.cleaned_data.get('avaliacao_green')
-
+            
             # Aplicar filtros ao queryset
             if mes:
                 itens = itens.filter(mes__icontains=mes)
-            if atividade:
-                itens = itens.filter(atividade__icontains=atividade)
-            if carga_horaria:
-                itens = itens.filter(carga_horaria__gte=carga_horaria)
-            if avaliacao_red:
-                itens = itens.filter(avaliacao_red__lte=avaliacao_red)
-            if avaliacao_yellow:
-                itens = itens.filter(avaliacao_yellow__lte=avaliacao_yellow)
-            if avaliacao_green:
-                itens = itens.filter(avaliacao_green__lte=avaliacao_green)
+          
 
     else:
         form = AtividadesForm()
 
     # Retornar dados JSON para atualização assíncrona
     data = {
-        'itens': [{'mes': item.mes, 'atividade': item.atividade, 'carga_horaria': item.carga_horaria,
-                   'avaliacao_red': item.avaliacao_red, 'avaliacao_yellow': item.avaliacao_yellow,
-                   'avaliacao_green': item.avaliacao_green} for item in itens]
+        'itens': [{'mes': item.mes} for item in itens]
     }
 
     return render(request, 'desenvolvimento.html', {'itens': itens, 'form': form, 'data': data})
@@ -224,6 +208,9 @@ def albumderecordacoesepecificio(request):
 def menucriancafunci(request, crianca_id):
     crianca = Crianca.objects.get(pk=crianca_id)
     return render(request, 'menucriancafuncionario.html', {'crianca': crianca})
+
+def menucriancafunciold(request):
+    return render(request, 'menucriancafuncionarioold.html')
 
 
 def albumderecordacoesold(request):

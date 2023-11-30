@@ -49,7 +49,7 @@ class ItemFilterForm(forms.Form):
 class AtividadesForm(forms.ModelForm):
     class Meta:
         model = Atividades
-        fields = ['mes', 'atividade', 'carga_horaria', 'avaliacao_red', 'avaliacao_yellow', 'avaliacao_green']
+        fields = ['mes']
 
 class CadastroCriancaForm(forms.ModelForm):
     class Meta:

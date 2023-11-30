@@ -171,22 +171,26 @@
         </form>
     </div>
     <div class="tabela-container" id="tabela-Janeiro">
-        <h2>Itens</h2>
     
         <table>
             <thead>
                 <tr>
-                    <th>Nome</th>
-                    <th>Descrição</th>
-                    <th>Preço</th>
+                    <th>Atividade</th>
+                    <th>Carga Horaria</th>
+                    <th>Avaliação</th>
                 </tr>
             </thead>
             <tbody>
                 {% for item in itens %}
                     <tr>
-                        <td>{{ item.nome }}</td>
-                        <td>{{ item.destinatario }}</td>
-                        <td>{{ item.mensagem }}</td>
+                        <td>{{ item.atividade }}</td>
+                        <td>{{ item.carga_horaria }}</td>
+                    
+                        <td class="{% if item.avaliacao_red == 'red' %}red{% endif %}">{{ item.avaliacao_red }}</td>
+                        <td class="{% if item.avaliacao_yellow == 'yellow' %}yellow{% endif %}">{{ item.avaliacao_yellow }}</td>
+                        <td class="{% if item.avaliacao_green == 'green' %}green{% endif %}">{{ item.avaliacao_green }}</td>
+                    
+                        
                     </tr>
                 {% endfor %}
             </tbody>

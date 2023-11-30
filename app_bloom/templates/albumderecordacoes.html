@@ -13,7 +13,6 @@
             flex-direction: column;
             margin: 0;
         }
-
         #header {
             position: fixed;
             top: 0;
@@ -27,14 +26,12 @@
             padding: 14px;
             z-index: 1000;
         }
-
         #logo-container {
             display: flex;
             align-items: center;
             gap: 10px;
             margin-right: 40px;
         }
-
         button {
             font-size: 14px;
             padding: 20px;
@@ -53,7 +50,6 @@
             border: none;
             box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
         }
-
         .text {
             float: left;
             font-size: 12px;
@@ -65,7 +61,6 @@
             margin-bottom: 100px;
             z-index: 1080;
         }
-
         .flex-center {
             display: flex;
             justify-content: center;
@@ -73,7 +68,6 @@
             flex-wrap: wrap;
             text-align: center;
         }
-
         a {
             text-decoration: none;
             color: inherit;
@@ -83,13 +77,13 @@
                 border-collapse: collapse;
                 width: 100%;
             }
-    
+
             th, td {
                 border: 1px solid #dddddd;
                 text-align: left;
                 padding: 8px;
             }
-    
+
             img {
                 max-width: 100px;
                 max-height: 100px;
@@ -152,34 +146,26 @@
         <div class="text">
             <p>Login > Selecionar > Menu Crianca > Álbum de recordações</p>
         </div>
-        
+
     </div>
-    <!-- seu_template.html -->
-<div>
-    <table>
-        <thead>
-            <tr>
-                <th>Nome</th>
-                <th>Imagem</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for grupo in recordacoes %}
-                {% for crianca in grupo %}
+    </div>
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Imagem</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for crianca in criancas %}
                     <tr>
                         <td>{{ crianca.nome }}</td>
-                        <td>
-                            <a href="{% url 'albumrecordacoesespecifico' crianca.id %}">
-                                <img src="{{ crianca.imagem.url }}" alt="{{ crianca.nome }}">
-                            </a>
-                        </td>
+                        <td><img src="{{ crianca.imagem.url }}" alt="{{ crianca.nome }}"></td>
                     </tr>
                 {% endfor %}
-            {% endfor %}
-        </tbody>
-    </table>
-</div>
-
-    
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

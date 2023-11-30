@@ -22,7 +22,7 @@ urlpatterns = [
     path('desenvolvimento',views.desenvolvimentopadri,name='desenvolvimento'),
     path('albumrecordacoesespecifico/<int:crianca_id>/', views.albumderecordacoesepecificio, name='albumrecordacoesespecifico'),
     path('menucriancafunci/<int:crianca_id>/', views.menucriancafunci, name='menucriancafunci'),
-
+    path('menucriancafunciold', views.menucriancafunciold, name='menucriancafunciold'),
     path('desenvolvimentofunci/<int:crianca_id>/', views.desenvolvimentofunci, name='desenvolvimentofunci'),
     path('album_recordacoes/<int:crianca_id>/', views.albumrecordacoes, name='albumrecordacoesnew'),
     path('albumrecordacoes/',views.albumderecordacoesold,name='albumrecordacoes')
