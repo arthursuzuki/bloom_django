@@ -205,7 +205,7 @@ def albumderecordacoesold(request):
             'criancas': criancas,
         }
 
-        return render(request, 'albumderecordacoes.html', context)
+        return render(request, 'albumderecordacoes.html.html', context)
     else:
         # Handle form submission for other HTTP methods if needed
         pass
