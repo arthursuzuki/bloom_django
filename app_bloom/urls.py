@@ -23,7 +23,7 @@ urlpatterns = [
     path('albumrecordacoesespecifico/<int:crianca_id>/', views.albumderecordacoesepecificio, name='albumrecordacoesespecifico'),
     path('menucriancafunci/<int:crianca_id>/', views.menucriancafunci, name='menucriancafunci'),
     path('menucriancafunciold', views.menucriancafunciold, name='menucriancafunciold'),
-    path('desenvolvimentofunci/<int:crianca_id>/', views.desenvolvimentofunci, name='desenvolvimentofunci'),
+    path('desenvolvimentofunci', views.desenvolvimentofunci, name='desenvolvimentofunci'),
     path('album_recordacoes/<int:crianca_id>/', views.albumrecordacoes, name='albumrecordacoesnew'),
     path('albumrecordacoes/',views.albumderecordacoesold,name='albumrecordacoes'),
     path('eumanha', views.eumanha, name='eumanha'),
@@ -32,6 +32,7 @@ urlpatterns = [
     path('eutarde', views.eutarde, name='eutarde'),
     path('nosmanha', views.nosmanha, name='nosmanha'),
     path('nostarde', views.nostarde, name='nostarde'),
+    path('fomr',views.create_recordacao,name='createrecordacao')
 ]
 
 

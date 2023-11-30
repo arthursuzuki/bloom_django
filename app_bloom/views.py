@@ -104,25 +104,8 @@ def cadastropadrinho(request):
     return render(request, 'cadastropadrinho.html', {'form': form, 'name': 'Cadastro Padrinho'})
 
 
-def desenvolvimentofunci(request, crianca_id):
-    crianca = get_object_or_404(Crianca, pk=crianca_id)
-
-    if request.method == 'POST':
-        mes = request.POST.get('mes')
-        atividade = request.POST.get('atividade_secao1')
-        carga_horaria = request.POST.get('carga')
-        desempenho = request.POST.get('desempenho_secao1')
-
-        # Salvar no banco de dados associando com a criança
-        DadosCrianca.objects.create(
-            crianca=crianca,
-            mes=mes,
-            atividade=atividade,
-            carga_horaria=carga_horaria,
-            desempenho=desempenho
-        )
-
-    return render(request, 'desenvolvimentofunci.html', {'crianca': crianca})
+def desenvolvimentofunci(request,crianca_id=None):
+    return render(request, 'desenvolvimentofunci.html')
 
 
 
@@ -214,18 +197,18 @@ def menucriancafunciold(request):
 
 
 def albumderecordacoesold(request):
-    recordacoes = recordacoes.objects.all()
-    # Divida os registros em grupos de 5
-    records_por_pagina = 5
-    paginas = [recordacoes[i:i + records_por_pagina] for i in range(0, len(recordacoes), records_por_pagina)]
-    # Obtenha o número da página da consulta GET (se disponível)
-    page = request.GET.get('page', 1)
-    # Se a página for maior que o número total de páginas, retorne a última página
-    try:
-        current_page = paginas[int(page) - 1]
-    except IndexError:
-        current_page = paginas[-1]
-    return render(request, 'albumderecordacoes.html', {'recordacoes': current_page})
+    if request.method == 'GET':
+        # Assuming you have a Crianca model with a field named 'imagem'
+        criancas = Crianca.objects.all()
+
+        context = {
+            'criancas': criancas,
+        }
+
+        return render(request, 'albumderecordacoes.html', context)
+    else:
+        # Handle form submission for other HTTP methods if needed
+        pass
 
 def eumanha(request):
     context = {
@@ -256,3 +239,15 @@ def nostarde(request):
     context = {
     }
     return render(request, 'nostarde.html', context) 
+
+def create_recordacao(request):
+    if request.method == 'POST':
+        form = RecordacoesForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            # Redirect to a success page or do something else
+            return redirect('success_page')
+    else:
+        form = RecordacoesForm()
+
+    return render(request, 'fomr.html', {'form': form})

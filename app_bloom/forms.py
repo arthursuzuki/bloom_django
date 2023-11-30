@@ -82,3 +82,12 @@ class PadrinhoForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['motivoCadastro'].widget.attrs['class'] = 'form-control-sm'
         self.fields['motivoCadastro'].widget.attrs['id'] = 'motivoCadastro'
+
+class RecordacoesForm(forms.ModelForm):
+    class Meta:
+        model = Recordacoes
+        # Specify the fields you want in the form
+        fields = ['cpf', 'imagem_recordacao']
+
+    def __init__(self, *args, **kwargs):
+        super(RecordacoesForm, self).__init__(*args, **kwargs)
